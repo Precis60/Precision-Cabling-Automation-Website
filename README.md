@@ -225,7 +225,7 @@ Windsurf/
 
 ### Frontend (GitHub Pages)
 1. Build and deploy: `npm run deploy`
-2. Site will be available at: `https://precis60.github.io/Windsurf/`
+2. Site will be available at: `https://precis60.github.io/Precision-Cabling-Automation-Website/`
 3. Automatic deployment via gh-pages package
 
 ### Backend (Render)

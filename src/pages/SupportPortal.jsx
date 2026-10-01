@@ -405,11 +405,11 @@ const SupportPortal = () => {
                 fontSize: '14px',
                 wordBreak: 'break-all'
               }}>
-                https://precis60.github.io/Windsurf/support-request
+                https://precis60.github.io/Precision-Cabling-Automation-Website/#/support-request
               </code>
               <button
                 onClick={() => {
-                  navigator.clipboard.writeText('https://precis60.github.io/Windsurf/support-request');
+                  navigator.clipboard.writeText('https://precis60.github.io/Precision-Cabling-Automation-Website/#/support-request');
                   alert('Link copied to clipboard!');
                 }}
                 style={{
