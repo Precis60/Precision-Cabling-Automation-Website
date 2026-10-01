@@ -7,7 +7,7 @@ export default defineConfig({
     include: ['date-fns-tz'],
   },
   plugins: [react()],
-  base: '/Windsurf/',
+  base: '/Precision-Cabling-Automation-Website/',
   build: {
     rollupOptions: {
       output: {

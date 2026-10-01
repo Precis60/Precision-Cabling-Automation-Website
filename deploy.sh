@@ -96,7 +96,7 @@ main() {
     echo "3. Update API endpoint in frontend"
     echo "4. Test the complete system"
     
-    print_status "Your secure site is available at: https://precis60.github.io/Windsurf/"
+    print_status "Your secure site is available at: https://precis60.github.io/Precision-Cabling-Automation-Website/"
 }
 
 # Run main function

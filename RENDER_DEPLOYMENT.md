@@ -31,7 +31,7 @@ This guide provides step-by-step instructions for deploying the application usin
 ### Deploy Backend Service
 
 1. In Render Dashboard, click **"New +"** → **"Web Service"**
-2. Connect to your GitHub repository: `Precis60/Windsurf`
+2. Connect to your GitHub repository: `Precis60/Precision-Cabling-Automation-Website`
 3. Configure the service:
    - **Name**: `precision-cabling-backend`
    - **Root Directory**: `backend`
@@ -84,7 +84,7 @@ node -e "console.log(require('crypto').randomBytes(64).toString('hex'))"
 - Verify tables are created on first startup
 
 ### Authentication Test
-1. Visit the frontend: `https://precis60.github.io/Windsurf/`
+1. Visit the frontend: `https://precis60.github.io/Precision-Cabling-Automation-Website/`
 2. Try logging in with test credentials
 3. Verify JWT token is received
 
