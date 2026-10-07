@@ -34,7 +34,7 @@ Copy `.env.example` to `.env` for local values. In GitHub Actions, store `VITE_C
 
 ## GitHub Pages and the custom domain
 
-The published project site is:
+A push to `main` runs `.github/workflows/deploy.yml`, which builds the site and publishes `dist/` to GitHub Pages. The published project site is:
 
 https://precis60.github.io/Precision-Cabling-Automation-Website/
 
