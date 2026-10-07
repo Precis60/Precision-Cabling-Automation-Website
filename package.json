@@ -1,7 +1,7 @@
 {
   "name": "precision-cabling-automation",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -11,8 +11,6 @@
     "deploy": "npm run build && gh-pages -d dist"
   },
   "dependencies": {
-    "date-fns": "^4.1.0",
-    "firebase": "^12.0.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-router-dom": "^7.6.3"

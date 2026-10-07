@@ -1,307 +1,65 @@
-# Precision Cabling Automation - Business Website
+# Precision Cabling & Automation
 
-A comprehensive business management platform for Precision Cabling Solutions, built with React and Vite.
+Public marketing website for Precision Cabling & Automation, Yarraville.
 
-🚀 **Latest Update**: Fixed calendar monthly, weekly, and daily views with complete CSS implementation.
+The site is a static React application (Vite) for GitHub Pages. It presents the practice — consultation, design, specification, installation, programming, and support — to residential and commercial clients.
 
-## 🏗️ Architecture
+Staff operations are not part of this website.
 
-- **Frontend**: React 19 + Vite + React Router
-- **Backend**: Node.js + Express + PostgreSQL
-- **Database**: Supabase PostgreSQL (secure, scalable)
-- **Authentication**: JWT-based with bcrypt password hashing
-- **Deployment**: GitHub Pages (frontend) + Render (backend) + Supabase (database)
+## Develop
 
-## 🚀 Features
-
-### Frontend
-- Modern React application with responsive design
-- User authentication (login/register)
-- Protected routes and role-based access
-- Dashboard with real-time data
-- Calendar integration
-- Customer management
-- Support portal
-- Project tracking
-
-### Backend API
-- RESTful API with Express.js
-- Secure authentication with JWT
-- Role-based access control (customer, staff, admin)
-- Input validation and sanitization
-- Rate limiting and security headers
-- Comprehensive error handling
-- PostgreSQL database integration
-
-### Database
-- Supabase PostgreSQL for high availability
-- Encrypted connections (SSL/TLS)
-- Automated backups and point-in-time recovery
-- Connection pooling for serverless environments
-- Optimized with indexes for performance
-- Sample data for testing
-
-## 📋 Prerequisites
-
-- Node.js 18+ and npm
-- Supabase Account (for database)
-- Render Account (for backend hosting)
-- Git
-
-## 🛠️ Installation & Setup
-
-### 1. Clone the Repository
-
-\`\`\`bash
-git clone https://github.com/Precis60/Windsurf.git
-cd Windsurf
-\`\`\`
-
-### 2. Install Node.js (if not installed)
-
-**macOS (using Homebrew):**
-\`\`\`bash
-# Install Homebrew if not installed
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-
-# Install Node.js
-brew install node
-\`\`\`
-
-**Other platforms:**
-- Download from [nodejs.org](https://nodejs.org/)
-
-### 3. Setup Supabase Database
-
-Follow the detailed guide in [`DATABASE_SETUP_INSTRUCTIONS.md`](DATABASE_SETUP_INSTRUCTIONS.md) to:
-- Create Supabase project
-- Get connection credentials
-- Configure environment variables
-
-### 4. Backend Setup
-
-\`\`\`bash
-# Navigate to backend directory
-cd backend
-
-# Install dependencies
+```bash
 npm install
-
-# Create environment file
-cp .env.example .env
-
-# Edit .env with your Supabase credentials
-# DATABASE_URL=postgresql://postgres.[ref]:[password]@aws-0-[region].pooler.supabase.com:6543/postgres
-# Or use individual variables:
-# DB_HOST=aws-0-[region].pooler.supabase.com
-# DB_PORT=6543
-# DB_NAME=postgres
-# DB_USER=postgres.[ref]
-# DB_PASSWORD=your-password
-# DB_SSL=true
-
-# Setup database tables and sample data
-npm run setup-db
-
-# Start development server
 npm run dev
-\`\`\`
+```
 
-The backend will run on `http://localhost:3001`
+The dev server runs at http://localhost:5173.
 
-### 5. Frontend Setup
+```bash
+npm run build
+npm run preview
+npm run lint
+```
 
-\`\`\`bash
-# Navigate back to root directory
-cd ..
+`npm run deploy` builds and publishes `dist/` with `gh-pages`.
 
-# Install frontend dependencies
-npm install
+## Contact form
 
-# Create environment file
-cp .env.example .env
+The consultation and contact forms collect name, email, phone, site type, systems of interest, timeline, and a message.
 
-# Start development server
-npm run dev
-\`\`\`
+- Set `VITE_CONTACT_FORM_ENDPOINT` to post the enquiry in the page. A Formspree endpoint looks like `https://formspree.io/f/xxxxxxxx`. A Resend setup should be a URL you control that accepts the JSON body (`name`, `email`, `phone`, `siteType`, `systems`, `timeline`, `enquiryType`, `message`) and sends it to `admin@precisioncabling.com.au`.
+- When the variable is empty, **Send enquiry** opens the visitor’s email application with the message addressed to `admin@precisioncabling.com.au`. The same text is shown on the page so it can be copied if the mail app does not open.
 
-The frontend will run on `http://localhost:5173`
+Copy `.env.example` to `.env` for local values. In GitHub Actions, store `VITE_CONTACT_FORM_ENDPOINT` and, if you want cookieless analytics, `VITE_PLAUSIBLE_DOMAIN` as repository secrets. Analytics is not loaded when the domain is unset.
 
-## 🔐 Demo Accounts
+## GitHub Pages and the custom domain
 
-After running the database setup, you can use these accounts:
+The published project site is:
 
-**Administrator:**
-- Email: `admin@precisioncabling.com`
-- Password: `Admin123!`
+https://precis60.github.io/Precision-Cabling-Automation-Website/
 
-**Customer:**
-- Email: `customer@example.com`
-- Password: `Customer123!`
+`base` in `vite.config.js` is `/Precision-Cabling-Automation-Website/` so asset paths match that URL.
 
-⚠️ **Change these passwords in production!**
+To serve the site on `precisioncabling.com.au`:
 
-## 🗂️ Project Structure
+1. In the GitHub repository, set the Pages custom domain and turn on HTTPS.
+2. At the DNS host for `precisioncabling.com.au`, point the name at GitHub Pages:
+   - Apex `A` records: `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
+   - `www` `CNAME` to `precis60.github.io`
+3. Change `base` in `vite.config.js` to `'/'`, add a `CNAME` file if GitHub does not create one, and redeploy. Until `base` is `/`, a custom domain will request assets under the repository path and the pages will not load correctly.
+4. After the new host answers, redirect the old Squarespace site to it.
 
-\`\`\`
-Windsurf/
-├── src/                          # Frontend React application
-│   ├── components/               # Reusable React components
-│   │   ├── Auth.jsx             # Login/Register components
-│   │   ├── Dashboard.jsx        # User dashboard
-│   │   └── *.css               # Component styles
-│   ├── pages/                   # Page components
-│   ├── services/                # API service layer
-│   │   ├── api.js              # Base API configuration
-│   │   └── index.js            # Service functions
-│   └── assets/                  # Static assets
-├── backend/                     # Node.js backend API
-│   ├── config/                  # Configuration files
-│   │   └── database.js         # Database connection
-│   ├── middleware/              # Express middleware
-│   │   └── auth.js             # Authentication middleware
-│   ├── routes/                  # API route handlers
-│   │   ├── auth.js             # Authentication routes
-│   │   ├── customers.js        # Customer management
-│   │   ├── appointments.js     # Appointment scheduling
-│   │   ├── projects.js         # Project management
-│   │   └── support.js          # Support tickets
-│   ├── scripts/                 # Utility scripts
-│   │   └── setup-database.js   # Database initialization
-│   ├── server.js               # Express server entry point
-│   └── AWS_RDS_SETUP.md        # Database setup guide
-├── public/                      # Static files
-├── package.json                # Frontend dependencies
-└── README.md                   # This file
-\`\`\`
+DNS is not changed by this repository.
 
-## 🔗 API Endpoints
+## Contact details on the site
 
-### Authentication
-- `POST /api/auth/register` - Register new user
-- `POST /api/auth/login` - User login
-- `GET /api/auth/profile` - Get user profile
-- `POST /api/auth/logout` - User logout
+- 15a Hawkhurst Street, Yarraville VIC 3013
+- 0413 729 663
+- admin@precisioncabling.com.au
+- support@precisioncabling.com.au
 
-### Customers
-- `GET /api/customers` - List customers (admin/staff)
-- `GET /api/customers/:id` - Get customer details
-- `PUT /api/customers/:id` - Update customer
-- `DELETE /api/customers/:id` - Delete customer (admin)
+ABN, consultation fee, insurance, licences, and case-study narratives are marked as placeholders until the principal supplies them.
 
-### Appointments
-- `GET /api/appointments` - List appointments
-- `POST /api/appointments` - Create appointment
-- `GET /api/appointments/:id` - Get appointment details
-- `PUT /api/appointments/:id` - Update appointment
-- `DELETE /api/appointments/:id` - Delete appointment
+## What this repository no longer contains
 
-### Projects
-- `GET /api/projects` - List projects
-- `POST /api/projects` - Create project (staff/admin)
-- `GET /api/projects/:id` - Get project details
-- `PUT /api/projects/:id` - Update project
-- `DELETE /api/projects/:id` - Delete project (admin)
-
-### Support
-- `GET /api/support` - List support tickets
-- `POST /api/support` - Create support ticket
-- `GET /api/support/:id` - Get ticket details
-- `POST /api/support/:id/responses` - Add response
-- `PUT /api/support/:id` - Update ticket (staff/admin)
-
-## 🔒 Security Features
-
-- **Authentication**: JWT tokens with secure expiration
-- **Password Security**: bcrypt hashing with salt rounds
-- **Input Validation**: express-validator for all inputs
-- **Rate Limiting**: Prevents brute force attacks
-- **CORS Protection**: Configurable cross-origin policies
-- **SQL Injection Prevention**: Parameterized queries
-- **XSS Protection**: Helmet.js security headers
-- **Database Encryption**: SSL/TLS connections to Supabase
-
-## 🚀 Deployment
-
-### Frontend (GitHub Pages)
-1. Build and deploy: `npm run deploy`
-2. Site will be available at: `https://precis60.github.io/Precision-Cabling-Automation-Website/`
-3. Automatic deployment via gh-pages package
-
-### Backend (Render)
-1. Connect GitHub repository to Render
-2. Set environment variables (DATABASE_URL, JWT_SECRET, etc.)
-3. Render will automatically deploy on git push
-4. Backend URL: `https://precision-cabling-backend.onrender.com`
-
-### Database (Supabase)
-1. Create project at https://supabase.com
-2. Copy connection pooling URL (Transaction mode)
-3. Add to Render environment variables
-4. Database automatically managed by Supabase
-
-## 🧪 Development
-
-### Running Tests
-\`\`\`bash
-# Backend tests
-cd backend
-npm test
-
-# Frontend tests
-cd ..
-npm test
-\`\`\`
-
-### Code Style
-- ESLint configuration included
-- Prettier formatting recommended
-- Pre-commit hooks for code quality
-
-## 📈 Performance
-
-- Database indexing for optimal queries
-- Connection pooling for database efficiency
-- Frontend code splitting with Vite
-- Image optimization and lazy loading
-- Caching strategies for API responses
-
-## 🐛 Troubleshooting
-
-### Common Issues
-
-1. **Database Connection Failed**
-   - Check Supabase project is active (not paused)
-   - Verify DATABASE_URL in Render environment variables
-   - Ensure using connection pooling URL (port 6543)
-
-2. **Authentication Errors**
-   - Check JWT_SECRET is set
-   - Verify token expiration settings
-   - Clear browser localStorage
-
-3. **CORS Issues**
-   - Update CORS_ORIGIN in backend .env
-   - Check frontend API URL configuration
-
-### Support
-
-For technical support or questions:
-- Email: jamie@projectconsultants.org
-- Phone: 0413 729 663
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Commit your changes
-4. Push to the branch
-5. Create a Pull Request
-
-## 📄 License
-
-This project is proprietary software for Precision Cabling & Automation.
-
----
-
-**Built with ❤️ for Precision Cabling & Automation**
+The embedded customer and staff application (CRM, dashboards, calendars, project editors, client portals, and the Express API under `backend/`) has been removed. If a Render service for that API is still running from an earlier deploy, shut it down. This site does not call it.

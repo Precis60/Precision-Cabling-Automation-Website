@@ -1,23 +1,18 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-// https://vite.dev/config/
+// Project-site base for GitHub Pages. For a custom domain at the apex,
+// change this to '/' and redeploy. See README.
 export default defineConfig({
-  optimizeDeps: {
-    include: ['date-fns-tz'],
-  },
   plugins: [react()],
   base: '/Precision-Cabling-Automation-Website/',
   build: {
     rollupOptions: {
       output: {
         manualChunks: {
-          // Vendor chunk for React and React Router
           vendor: ['react', 'react-dom', 'react-router-dom'],
         },
       },
     },
-    // Increase chunk size warning limit to 1000kb
-    chunkSizeWarningLimit: 1000,
   },
 })
