@@ -1,124 +1,65 @@
-import React, { useState, useEffect, Suspense, lazy } from "react";
-import { HashRouter as Router, Routes, Route, Navigate } from "react-router-dom";
-import Header from "./Header";
-import Footer from "./Footer";
-import { authService } from "./services/secureApi";
-import "./Header.css";
-import "./Footer.css";
-import "./App.css";
+import { Suspense, lazy } from "react";
+import { HashRouter, Route, Routes } from "react-router-dom";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 
-// Lazy load components for code splitting
 const Home = lazy(() => import("./pages/Home"));
 const Services = lazy(() => import("./pages/Services"));
+const Work = lazy(() => import("./pages/Work"));
 const Consultation = lazy(() => import("./pages/Consultation"));
+const About = lazy(() => import("./pages/About"));
 const Contact = lazy(() => import("./pages/Contact"));
-const CompanyPolicies = lazy(() => import("./pages/CompanyPolicies"));
-const AboutUs = lazy(() => import("./pages/AboutUs"));
-const Calendar = lazy(() => import("./pages/Calendar"));
-const CRM = lazy(() => import("./pages/CRM"));
-const CRMWorking = lazy(() => import("./pages/CRM-Working"));
-const CRMSimple = lazy(() => import("./pages/CRM-Simple"));
-const SupportPortal = lazy(() => import("./pages/SupportPortal"));
-const Portal = lazy(() => import("./pages/Portal"));
-const ClientPortal = lazy(() => import("./pages/ClientPortal"));
-const Login = lazy(() => import("./pages/Login"));
-const Dashboard = lazy(() => import("./pages/Dashboard"));
-const SupportRequest = lazy(() => import("./pages/SupportRequest"));
-const Security = lazy(() => import("./pages/Security"));
-const Projects = lazy(() => import("./pages/Projects"));
-const NewProject = lazy(() => import("./pages/NewProject"));
-const EditProject = lazy(() => import("./pages/EditProject"));
+const Policies = lazy(() => import("./pages/Policies"));
+const Terms = lazy(() => import("./pages/Terms"));
+const Privacy = lazy(() => import("./pages/Privacy"));
+const Warranty = lazy(() => import("./pages/Warranty"));
 const NotFound = lazy(() => import("./pages/NotFound"));
-const AdminRoute = lazy(() => import("./components/AdminRoute"));
-const StaffRoute = lazy(() => import("./components/StaffRoute"));
 
-function App() {
-  // Authentication state
-  const [user, setUser] = useState(null);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    // Check if user is already authenticated
-    if (authService.isAuthenticated()) {
-      setUser(authService.getCurrentUser());
-    }
-    setLoading(false);
-  }, []);
-
-  const handleLogin = (userData) => {
-    setUser(userData.user);
-  };
-
-  const handleLogout = () => {
-    authService.logout();
-    setUser(null);
-  };
-
-
-  if (loading) {
-    return (
-      <div style={{ 
-        display: 'flex', 
-        justifyContent: 'center', 
-        alignItems: 'center', 
-        height: '100vh',
-        fontSize: '1.2rem',
-        color: '#22314a'
-      }}>
-        Loading...
-      </div>
-    );
-  }
-  
+function Loading() {
   return (
-    <Router>
-      <Header user={user} onLogout={handleLogout} />
-      <main style={{ minHeight: "35vh", paddingTop: "3rem", paddingBottom: "3rem" }}>
-        <Suspense fallback={<div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '50vh', fontSize: '1.2rem', color: '#22314a' }}>Loading...</div>}>
+    <div className="section">
+      <div className="wrap">
+        <p>Loading…</p>
+      </div>
+    </div>
+  );
+}
+
+export default function App() {
+  return (
+    <HashRouter>
+      <button
+        type="button"
+        className="skip-link"
+        onClick={() => {
+          const content = document.getElementById("content");
+          if (!content) return;
+          content.tabIndex = -1;
+          content.focus();
+        }}
+      >
+        Skip to content
+      </button>
+      <Header />
+      <main id="content">
+        <Suspense fallback={<Loading />}>
           <Routes>
-            {/* Public routes */}
             <Route path="/" element={<Home />} />
             <Route path="/services" element={<Services />} />
+            <Route path="/work" element={<Work />} />
             <Route path="/consultation" element={<Consultation />} />
+            <Route path="/about-us" element={<About />} />
+            <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
-            <Route path="/company-policies" element={<CompanyPolicies />} />
-            <Route path="/about-us" element={<AboutUs />} />
-            
-            {/* Authentication route */}
-            <Route path="/login" element={<Login onLogin={handleLogin} />} />
-            
-            {/* Public support request route */}
-            <Route path="/support-request" element={<SupportRequest />} />
-            
-            {/* Admin-only routes */}
-            <Route element={<AdminRoute />}>
-              <Route path="/dashboard" element={<Dashboard />} />
-              <Route path="/calendar" element={<Calendar />} />
-              <Route path="/crm" element={<CRM />} />
-              <Route path="/crm-working" element={<CRMWorking />} />
-              <Route path="/crm-test" element={<CRMSimple />} />
-              <Route path="/support-portal" element={<SupportPortal />} />
-              <Route path="/security" element={<Security />} />
-            </Route>
-
-            {/* Staff and Admin routes */}
-            <Route element={<StaffRoute />}>
-              <Route path="/projects" element={<Projects />} />
-              <Route path="/projects/new" element={<NewProject />} />
-              <Route path="/projects/:id" element={<EditProject />} />
-            </Route>
-
-            {/* General authenticated routes */}
-            <Route path="/portal" element={<Portal />} />
-            <Route path="/client-portal" element={<ClientPortal />} />
-            
+            <Route path="/company-policies" element={<Policies />} />
+            <Route path="/terms" element={<Terms />} />
+            <Route path="/privacy" element={<Privacy />} />
+            <Route path="/support-warranty" element={<Warranty />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Suspense>
       </main>
       <Footer />
-    </Router>
+    </HashRouter>
   );
 }
-
-export default App;
