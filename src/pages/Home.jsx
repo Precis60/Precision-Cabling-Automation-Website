@@ -21,7 +21,7 @@ const jsonLd = {
   },
   areaServed: "Australia",
   description:
-    "Consultation, design, installation and programming for security, networks, lighting control and AV on residential and commercial sites.",
+    "Consultation, design, installation and programming for security, networks, lighting control and AV, plus garden and landscape maintenance, on residential and commercial sites.",
 };
 
 export default function Home() {
@@ -29,7 +29,7 @@ export default function Home() {
     <>
       <Seo
         title="Precision Cabling & Automation | Consultation, design and delivery"
-        description="Technology consulting, installation and programming for homes and commercial sites of any size. Security, networks, lighting control and AV. Book a consultation in Yarraville."
+        description="Technology consulting, installation and programming for homes and commercial sites of any size. Security, networks, lighting control, AV, and garden and landscape maintenance. Book a consultation in Yarraville."
         path="/"
         jsonLd={jsonLd}
       />
@@ -40,6 +40,7 @@ export default function Home() {
           <p className="lede">
             Security, networks, lighting control, and AV, designed as one system.
             We advise through projects of any size, then install and program the work ourselves.
+            Garden and landscape maintenance is offered for the same sites.
           </p>
           <div className="hero-actions">
             <Link className="button" to="/consultation">Book a consultation</Link>
@@ -63,12 +64,12 @@ export default function Home() {
       <section className="section" aria-labelledby="pillars-title">
         <div className="wrap">
           <div className="section-head">
-            <h2 id="pillars-title">Four systems, one practice</h2>
+            <h2 id="pillars-title">Five services, one practice</h2>
             <p>
-              Each pillar is scoped in consultation, then installed and programmed to the agreed design.
+              Each service is scoped in consultation, then carried out by this practice.
             </p>
           </div>
-          <div className="grid-4">
+          <div className="pillar-grid">
             {PILLARS.map((pillar) => (
               <article className="card" key={pillar.id} id={pillar.id}>
                 <h3>{pillar.title}</h3>

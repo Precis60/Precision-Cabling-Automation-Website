@@ -303,15 +303,31 @@ a:hover {
   color: var(--muted);
 }
 
-.grid-4,
 .grid-3,
-.grid-2 {
+.grid-2,
+.pillar-grid {
   display: grid;
   gap: 1rem;
 }
 
-.grid-4 {
-  grid-template-columns: repeat(4, 1fr);
+.pillar-grid {
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+}
+
+.pillar-grid > .card {
+  grid-column: span 2;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.pillar-grid > .card:nth-child(n + 4) {
+  grid-column: span 3;
+}
+
+.pillar-grid .card a.more {
+  margin-top: auto;
+  padding-top: 1.1rem;
 }
 
 .grid-3 {
@@ -675,11 +691,20 @@ address.contact-block a {
 }
 
 @media (max-width: 980px) {
-  .grid-4,
   .steps,
   .cred-list,
-  .fact-list {
+  .fact-list,
+  .pillar-grid {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .pillar-grid > .card,
+  .pillar-grid > .card:nth-child(n + 4) {
+    grid-column: auto;
+  }
+
+  .pillar-grid > .card:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
   }
 
   .steps .step,
@@ -749,7 +774,7 @@ address.contact-block a {
   }
 
   .field-row,
-  .grid-4,
+  .pillar-grid,
   .steps,
   .cred-list,
   .fact-list,
