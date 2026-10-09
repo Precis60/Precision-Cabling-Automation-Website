@@ -6,6 +6,7 @@ export default function Footer() {
     <footer className="site-footer">
       <div className="wrap footer-grid">
         <div>
+          <span className="mark" aria-hidden="true">PCA</span>
           <strong>{SITE.name}</strong>
           <address className="contact-block">
             {SITE.street}

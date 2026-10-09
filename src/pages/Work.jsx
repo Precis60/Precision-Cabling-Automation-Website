@@ -22,15 +22,18 @@ export default function Work() {
           </p>
         </div>
       </section>
-      <section className="section" style={{ paddingTop: 0 }}>
+      <section className="section light">
         <div className="wrap grid-3">
           {CASE_STUDIES.map((study) => (
-            <article className="card study" key={study.id}>
-              <span className="kicker">Study {study.id}</span>
-              <h2>{study.title}</h2>
-              <p><strong>{study.label}</strong></p>
-              <p>{study.text}</p>
-              <span className="tag">{study.systems}</span>
+            <article className="study" key={study.id}>
+              <div className="study-empty">Photography withheld</div>
+              <div className="study-body">
+                <span className="kicker">Study {study.id}</span>
+                <h2>{study.title}</h2>
+                <p><strong>{study.label}</strong></p>
+                <p>{study.text}</p>
+                <span className="tag">{study.systems}</span>
+              </div>
             </article>
           ))}
         </div>
@@ -53,8 +56,8 @@ export default function Work() {
               </li>
             ))}
           </ul>
-          <p style={{ marginTop: "1.5rem" }}>
-            <Link to="/consultation">Discuss a current project</Link>
+          <p className="after-block">
+            <Link className="more" to="/consultation">Discuss a current project</Link>
           </p>
         </div>
       </section>

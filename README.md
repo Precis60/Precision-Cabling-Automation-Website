@@ -60,6 +60,10 @@ DNS is not changed by this repository.
 
 ABN, consultation fee, insurance, licences, and case-study narratives are marked as placeholders until the principal supplies them.
 
+## Photographs
+
+Illustrative images live in [`public/images`](public/images). [`public/images/README.md`](public/images/README.md) lists each slot: filename, where it appears, and the size and aspect to match when replacing it. Swap a file and keep the filename. The current files are Unsplash photographs under the [Unsplash License](https://unsplash.com/license). They are not projects of this practice, and not the premises. Case-study frames stay empty until a narrative can be published.
+
 ## What this repository no longer contains
 
 The embedded customer and staff application (CRM, dashboards, calendars, project editors, client portals, and the Express API under `backend/`) has been removed. If a Render service for that API is still running from an earlier deploy, shut it down. This site does not call it.

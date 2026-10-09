@@ -9,9 +9,12 @@ export default function Header() {
   return (
     <header className="site-header">
       <div className="header-inner">
-        <NavLink className="wordmark" to="/" onClick={close}>
-          <strong>Precision Cabling &amp; Automation</strong>
-          <span>Yarraville</span>
+        <NavLink className="brand" to="/" onClick={close}>
+          <span className="mark" aria-hidden="true">PCA</span>
+          <span className="wordmark">
+            <strong>Precision Cabling &amp; Automation</strong>
+            <span>Yarraville</span>
+          </span>
         </NavLink>
         <button
           className="menu-toggle"

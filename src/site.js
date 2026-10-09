@@ -25,31 +25,31 @@ export const PILLARS = [
     id: "security",
     title: "Security & access",
     summary:
-      "Access control, intercom, CCTV, and alarms designed as one system, then installed and programmed on site.",
+      "Access, intercom, CCTV, and alarms as one system, then installed and programmed.",
   },
   {
     id: "networks",
     title: "Networks & infrastructure",
     summary:
-      "Structured cabling, switching, and wireless that the rest of the building can depend on — specified, pulled, and commissioned.",
+      "Structured cabling, switching, and wireless. Specified, pulled, and commissioned.",
   },
   {
     id: "lighting",
     title: "Lighting & automation",
     summary:
-      "Lighting control and automation, designed around how the place is used, then programmed and handed over.",
+      "Control designed around how the place is used, then programmed and handed over.",
   },
   {
     id: "av",
     title: "AV & collaboration",
     summary:
-      "Rooms for living and rooms for meetings: display, audio, and control, installed and programmed with the other systems.",
+      "Display, audio, and control for living rooms and meeting rooms, installed with the other systems.",
   },
   {
     id: "garden",
     title: "Garden & landscape maintenance",
     summary:
-      "Scheduled visits that keep gardens and grounds in order, for homes and commercial sites. Arranged with outdoor lighting, irrigation control, or access when those are already in scope.",
+      "Scheduled care of gardens and grounds, for homes and commercial sites.",
   },
 ];
 
@@ -57,27 +57,27 @@ export const PROCESS = [
   {
     step: "01",
     title: "Discover",
-    text: "We walk the site, or the drawings, and learn how it is used, what is already installed, and what has to remain discreet.",
+    text: "We walk the site, or the drawings: how it is used, what is already installed, and what must stay discreet.",
   },
   {
     step: "02",
     title: "Design",
-    text: "Security, network, lighting, and AV are drawn as one system, with the risks and the interfaces made explicit.",
+    text: "Security, network, lighting, and AV drawn as one system, with the risks and the joins made explicit.",
   },
   {
     step: "03",
     title: "Specify",
-    text: "Equipment, pathways, and responsibilities are written down so the build can be priced and delivered without guesswork.",
+    text: "Equipment, pathways, and responsibilities written down, so the work can be priced and delivered.",
   },
   {
     step: "04",
     title: "Deliver",
-    text: "We install and program. The same practice that advised you is on site for the fit-off, not a separate contractor reading a report.",
+    text: "We install and program. The practice that advised you is on site for the fit-off.",
   },
   {
     step: "05",
     title: "Handover",
-    text: "You receive the operating notes and a clear path for maintenance. Urgent faults can be called in at any hour.",
+    text: "Operating notes, a path for maintenance, and urgent faults by phone at any hour.",
   },
 ];
 
