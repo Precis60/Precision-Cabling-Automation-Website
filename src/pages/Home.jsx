@@ -120,7 +120,6 @@ export default function Home() {
               width="1320"
               height="1650"
             />
-            <figcaption>Illustrative interior. Not a project by this practice.</figcaption>
           </figure>
         </div>
       </section>
@@ -187,7 +186,6 @@ export default function Home() {
               );
             })}
           </div>
-          <p className="figure-note">Photographs are illustrative placeholders, not projects of this practice.</p>
         </div>
       </section>
 
@@ -201,7 +199,6 @@ export default function Home() {
         <div className="wrap">
           <div className="bleed-card">
             <p>Designed as one system, then installed and programmed by the same practice.</p>
-            <p className="figure-note">Illustrative photograph. Not a client project.</p>
           </div>
         </div>
       </section>

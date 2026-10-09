@@ -31,7 +31,6 @@ export default function Contact() {
                 width="1500"
                 height="1125"
               />
-              <figcaption>Illustrative interior. Not a client project, and not the premises.</figcaption>
             </figure>
             <address className="contact-block">
               <strong>{SITE.name}</strong>

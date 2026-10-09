@@ -119,7 +119,6 @@ export default function Services() {
               ))}
             </ul>
           </nav>
-          <p className="figure-note">Photographs below are illustrative placeholders, not projects of this practice.</p>
         </div>
       </section>
       {PILLARS.map((pillar, index) => {

@@ -43,7 +43,6 @@ export default function About() {
               width="1500"
               height="1125"
             />
-            <figcaption>Illustrative interior. Not the premises, and not a client project.</figcaption>
           </figure>
         </div>
       </section>
