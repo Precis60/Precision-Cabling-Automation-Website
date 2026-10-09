@@ -57,7 +57,7 @@ export default function Consultation() {
           <h2>What the session covers</h2>
           <ul>
             <li>How the place is used, and by whom.</li>
-            <li>Which systems are in play: security and access, networks, lighting and automation, AV and collaboration.</li>
+            <li>Which systems are in play: security and access, networks, lighting and automation, AV and collaboration, and garden and landscape maintenance when the grounds are part of the brief.</li>
             <li>Constraints already set by the architecture, the builder, existing plant, timing, and discretion.</li>
             <li>What handover has to look like, including who will operate the system day to day.</li>
           </ul>

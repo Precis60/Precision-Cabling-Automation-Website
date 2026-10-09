@@ -16,7 +16,7 @@ export default function About() {
           <span className="kicker">About</span>
           <h1>Precision Cabling &amp; Automation</h1>
           <p className="lede">
-            A Yarraville practice for security, networks, lighting control, and AV.
+            A Yarraville practice for security, networks, lighting control, AV, and garden and landscape maintenance.
             The work runs from the first consultation through installation, programming, handover, and maintenance.
           </p>
         </div>

@@ -45,6 +45,12 @@ export const PILLARS = [
     summary:
       "Rooms for living and rooms for meetings: display, audio, and control, installed and programmed with the other systems.",
   },
+  {
+    id: "garden",
+    title: "Garden & landscape maintenance",
+    summary:
+      "Scheduled visits that keep gardens and grounds in order, for homes and commercial sites. Arranged with outdoor lighting, irrigation control, or access when those are already in scope.",
+  },
 ];
 
 export const PROCESS = [
@@ -119,6 +125,7 @@ export const SYSTEM_OPTIONS = [
   "Networks & infrastructure",
   "Lighting & automation",
   "AV & collaboration",
+  "Garden & landscape maintenance",
   "Not sure yet",
 ];
 

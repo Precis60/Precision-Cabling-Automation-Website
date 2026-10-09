@@ -52,6 +52,18 @@ const PILLARS = [
       "Support continues after the first meeting is held in the room, including urgent call-out when a space cannot wait.",
     ],
   },
+  {
+    id: "garden",
+    index: "05",
+    title: "Garden & landscape maintenance",
+    lead: "Ongoing care of gardens and grounds for homes and commercial sites. Visits are scheduled, and the work is the upkeep of the landscape between them.",
+    points: [
+      "Scheduled maintenance for a private garden, or for the grounds of a commercial site.",
+      "Routine upkeep of planted beds, lawns, and the edges of the property.",
+      "The interval is agreed for the site. A residence and a commercial frontage do not need the same one.",
+      "Where outdoor lighting, irrigation control, or access is already in scope with this practice, the grounds visits can be arranged with that work.",
+    ],
+  },
 ];
 
 export default function Services() {
@@ -67,15 +79,16 @@ export default function Services() {
     <>
       <Seo
         title="Services | Precision Cabling & Automation"
-        description="Security and access, networks, lighting and automation, and AV. Consultation, specification, installation and programming for residential and commercial sites."
+        description="Security and access, networks, lighting and automation, AV, and garden and landscape maintenance. Consultation, specification, installation, and grounds care for residential and commercial sites."
         path="/services"
       />
       <section className="narrow-hero">
         <div className="wrap">
           <span className="kicker">Services</span>
-          <h1>Four disciplines, delivered by the same practice.</h1>
+          <h1>Five disciplines, delivered by the same practice.</h1>
           <p className="lede">
             We consult, design, and specify, then install and program.
+            Garden and landscape maintenance is the ongoing care of the grounds.
             The sections below are how the work is organised.
           </p>
         </div>
