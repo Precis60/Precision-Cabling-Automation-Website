@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import Seo from "../components/Seo";
 import ConsultBand from "../components/ConsultBand";
+import { imageSrc } from "../images";
 import { PROCESS } from "../site";
 
 export default function About() {
@@ -22,29 +23,38 @@ export default function About() {
         </div>
       </section>
 
-      <section className="section" style={{ paddingTop: "1rem" }}>
-        <div className="wrap prose">
-          <h2>Jamie Anderson, principal</h2>
-          <p>
-            Jamie Anderson is the principal. He consults on the building, specifies the systems, and stays for installation and programming.
-            Clients deal with him from the first meeting through handover. Where a project needs other trades, they work to a scope he remains accountable for.
-          </p>
-          <p>
-            The practice advises private clients and project teams on residences and on commercial sites, including large ones, and it also takes smaller jobs that still need the same care.
-            The point of the consultation is to decide the right scope, then to carry it out.
-          </p>
-
-          <h2>How the practice operates</h2>
-          <p>Design, specify, deliver, maintain.</p>
-          <ul>
-            <li>Design — the systems and the way they meet.</li>
-            <li>Specify — equipment, cabling, and responsibilities in writing.</li>
-            <li>Deliver — installation and programming on site.</li>
-            <li>Maintain — handover notes, later changes, and 24-hour access for urgent call-out.</li>
-          </ul>
+      <section className="section light">
+        <div className="wrap about-grid">
+          <div className="prose">
+            <h2>Jamie Anderson, principal</h2>
+            <p>
+              Jamie Anderson is the principal. He consults on the building, specifies the systems, and stays for installation and programming.
+              Clients deal with him from the first meeting through handover. Where a project needs other trades, they work to a scope he remains accountable for.
+            </p>
+            <p>
+              The practice advises private clients and project teams on residences and on commercial sites, including large ones, and it also takes smaller jobs that still need the same care.
+              The consultation decides the right scope, then the practice carries it out.
+            </p>
+          </div>
+          <figure className="about-figure">
+            <img
+              src={imageSrc("detail-interior.jpg")}
+              alt="Illustrative photograph of a finished interior. Not the premises, and not a client project."
+              width="1500"
+              height="1125"
+            />
+            <figcaption>Illustrative interior. Not the premises, and not a client project.</figcaption>
+          </figure>
         </div>
-        <div className="wrap" style={{ marginTop: "2.5rem" }}>
-          <div className="steps">
+      </section>
+
+      <section className="section">
+        <div className="wrap">
+          <div className="section-head">
+            <h2>How the practice operates</h2>
+            <p>Design, specify, deliver, maintain.</p>
+          </div>
+          <div className="process">
             {PROCESS.map((item) => (
               <article className="step" key={item.step}>
                 <span className="num">{item.step}</span>
@@ -53,8 +63,8 @@ export default function About() {
               </article>
             ))}
           </div>
-          <p style={{ marginTop: "2rem" }}>
-            <Link to="/consultation">Book a consultation</Link>
+          <p className="after-block">
+            <Link className="button" to="/consultation">Book a consultation</Link>
           </p>
         </div>
       </section>

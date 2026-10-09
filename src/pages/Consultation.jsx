@@ -97,19 +97,21 @@ export default function Consultation() {
         </div>
       </section>
 
-      <section className="section" aria-labelledby="book-title">
+      <section className="section light" aria-labelledby="book-title">
         <div className="wrap contact-layout">
           <div>
             <h2 id="book-title">Book the session</h2>
             <p>
               Send the site type, the systems, and the timing. We reply from {SITE.adminEmail} with the fee and the next available session.
             </p>
-            <p>
+            <p className="callout">
               If something has failed and the site cannot wait, call{" "}
               <a href={`tel:${SITE.phoneTel}`}>{SITE.phoneDisplay}</a>. Urgent support and call-out are available 24 hours.
             </p>
           </div>
-          <EnquiryForm defaultIntent="consultation" />
+          <div className="form-panel">
+            <EnquiryForm defaultIntent="consultation" />
+          </div>
         </div>
       </section>
     </>
