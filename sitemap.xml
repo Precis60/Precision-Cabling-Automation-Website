@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://precis60.github.io/Precision-Cabling-Automation-Website/</loc><lastmod>2026-10-26</lastmod><priority>1.0</priority></url>
-  <url><loc>https://precis60.github.io/Precision-Cabling-Automation-Website/?/services</loc><lastmod>2026-10-26</lastmod><priority>0.9</priority></url>
-  <url><loc>https://precis60.github.io/Precision-Cabling-Automation-Website/?/home-garden</loc><lastmod>2026-10-26</lastmod><priority>0.9</priority></url>
-  <url><loc>https://precis60.github.io/Precision-Cabling-Automation-Website/?/consultation</loc><lastmod>2026-10-26</lastmod><priority>0.8</priority></url>
-  <url><loc>https://precis60.github.io/Precision-Cabling-Automation-Website/?/work</loc><lastmod>2026-10-26</lastmod><priority>0.7</priority></url>
-  <url><loc>https://precis60.github.io/Precision-Cabling-Automation-Website/?/contact</loc><lastmod>2026-10-26</lastmod><priority>0.7</priority></url>
-  <url><loc>https://precis60.github.io/Precision-Cabling-Automation-Website/?/about-us</loc><lastmod>2026-10-26</lastmod><priority>0.6</priority></url>
-  <url><loc>https://precis60.github.io/Precision-Cabling-Automation-Website/?/company-policies</loc><lastmod>2026-10-26</lastmod><priority>0.3</priority></url>
-  <url><loc>https://precis60.github.io/Precision-Cabling-Automation-Website/?/terms</loc><lastmod>2026-10-26</lastmod><priority>0.3</priority></url>
-  <url><loc>https://precis60.github.io/Precision-Cabling-Automation-Website/?/privacy</loc><lastmod>2026-10-26</lastmod><priority>0.3</priority></url>
-  <url><loc>https://precis60.github.io/Precision-Cabling-Automation-Website/?/support-warranty</loc><lastmod>2026-10-26</lastmod><priority>0.3</priority></url>
+  <url><loc>https://precis60.github.io/Precision-Cabling-Automation-Website/#/</loc><lastmod>2026-10-26</lastmod><priority>1.0</priority></url>
+  <url><loc>https://precis60.github.io/Precision-Cabling-Automation-Website/#/services</loc><lastmod>2026-10-26</lastmod><priority>0.9</priority></url>
+  <url><loc>https://precis60.github.io/Precision-Cabling-Automation-Website/#/services/security-cctv</loc><lastmod>2026-10-26</lastmod><priority>0.8</priority></url>
+  <url><loc>https://precis60.github.io/Precision-Cabling-Automation-Website/#/services/access-intercom</loc><lastmod>2026-10-26</lastmod><priority>0.8</priority></url>
+  <url><loc>https://precis60.github.io/Precision-Cabling-Automation-Website/#/services/networks-cabling</loc><lastmod>2026-10-26</lastmod><priority>0.8</priority></url>
+  <url><loc>https://precis60.github.io/Precision-Cabling-Automation-Website/#/services/lighting-automation</loc><lastmod>2026-10-26</lastmod><priority>0.8</priority></url>
+  <url><loc>https://precis60.github.io/Precision-Cabling-Automation-Website/#/services/av-meeting-rooms</loc><lastmod>2026-10-26</lastmod><priority>0.8</priority></url>
+  <url><loc>https://precis60.github.io/Precision-Cabling-Automation-Website/#/services/home-garden</loc><lastmod>2026-10-26</lastmod><priority>0.8</priority></url>
+  <url><loc>https://precis60.github.io/Precision-Cabling-Automation-Website/#/consultation</loc><lastmod>2026-10-26</lastmod><priority>0.8</priority></url>
+  <url><loc>https://precis60.github.io/Precision-Cabling-Automation-Website/#/contact</loc><lastmod>2026-10-26</lastmod><priority>0.7</priority></url>
+  <url><loc>https://precis60.github.io/Precision-Cabling-Automation-Website/#/about-us</loc><lastmod>2026-10-26</lastmod><priority>0.6</priority></url>
+  <url><loc>https://precis60.github.io/Precision-Cabling-Automation-Website/#/company-policies</loc><lastmod>2026-10-26</lastmod><priority>0.3</priority></url>
+  <url><loc>https://precis60.github.io/Precision-Cabling-Automation-Website/#/terms</loc><lastmod>2026-10-26</lastmod><priority>0.3</priority></url>
+  <url><loc>https://precis60.github.io/Precision-Cabling-Automation-Website/#/privacy</loc><lastmod>2026-10-26</lastmod><priority>0.3</priority></url>
+  <url><loc>https://precis60.github.io/Precision-Cabling-Automation-Website/#/support-warranty</loc><lastmod>2026-10-26</lastmod><priority>0.3</priority></url>
 </urlset>
