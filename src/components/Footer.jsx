@@ -9,8 +9,6 @@ export default function Footer() {
           <span className="mark" aria-hidden="true">PCA</span>
           <strong>{SITE.name}</strong>
           <address className="contact-block">
-            {SITE.street}
-            <br />
             {SITE.locality}
             <br />
             <a href={`tel:${SITE.phoneTel}`}>{SITE.phoneDisplay}</a>

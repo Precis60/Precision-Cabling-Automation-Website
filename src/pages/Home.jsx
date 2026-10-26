@@ -15,7 +15,6 @@ const jsonLd = {
   image: `${SITE.pagesUrl}favicon.svg`,
   address: {
     "@type": "PostalAddress",
-    streetAddress: SITE.street,
     addressLocality: "Yarraville",
     addressRegion: "VIC",
     postalCode: "3013",

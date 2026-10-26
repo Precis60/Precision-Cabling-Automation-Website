@@ -117,7 +117,7 @@ export default function Terms() {
 
           <h2>Contact</h2>
           <p>
-            {SITE.street}, {SITE.locality}<br />
+            {SITE.locality}<br />
             Email: <a href={`mailto:${SITE.adminEmail}`}>{SITE.adminEmail}</a><br />
             Mobile: <a href={`tel:${SITE.phoneTel}`}>{SITE.phoneDisplay}</a>
           </p>

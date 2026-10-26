@@ -25,7 +25,7 @@ export default function Warranty() {
             Contact us before arranging your own repair, so we can identify the fault and the sensible next step.
           </p>
           <p>
-            {SITE.street}, {SITE.locality}<br />
+            {SITE.locality}<br />
             Email: <a href={`mailto:${SITE.supportEmail}`}>{SITE.supportEmail}</a><br />
             Mobile: <a href={`tel:${SITE.phoneTel}`}>{SITE.phoneDisplay}</a>
           </p>

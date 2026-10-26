@@ -36,10 +36,7 @@ export default function Contact() {
             </figure>
             <address className="contact-block">
               <strong>{SITE.name}</strong>
-              <p>
-                {SITE.street}<br />
-                {SITE.locality}
-              </p>
+              <p>{SITE.locality}</p>
               <p>
                 Mobile: <a href={`tel:${SITE.phoneTel}`}>{SITE.phoneDisplay}</a><br />
                 Admin: <a href={`mailto:${SITE.adminEmail}`}>{SITE.adminEmail}</a><br />

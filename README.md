@@ -53,7 +53,7 @@ DNS is not changed by this repository.
 
 ## Contact details on the site
 
-- 15a Hawkhurst Street, Yarraville VIC 3013
+- Yarraville VIC 3013
 - 0413 729 663
 - admin@precisioncabling.com.au
 - support@precisioncabling.com.au

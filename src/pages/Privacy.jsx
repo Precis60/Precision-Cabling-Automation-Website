@@ -27,7 +27,7 @@ export default function Privacy() {
 
           <h2>Who we are</h2>
           <p>
-            The practice is {SITE.name}, {SITE.street}, {SITE.locality}.
+            The practice is {SITE.name}, {SITE.locality}.
             Privacy contact: <a href={`mailto:${SITE.adminEmail}`}>{SITE.adminEmail}</a>, {SITE.phoneDisplay}.
             The earlier policy used the name Precision Cabling Suppliers. Correspondence under either name is handled by this practice.
           </p>
@@ -111,7 +111,7 @@ export default function Privacy() {
           <h2>Complaints</h2>
           <p>
             Write to {SITE.adminEmail} or call {SITE.phoneDisplay}.
-            Address: {SITE.street}, {SITE.locality}.
+            Address: {SITE.locality}.
             If you are not satisfied with our response, you may contact the Office of the Australian Information Commissioner at www.oaic.gov.au.
           </p>
 

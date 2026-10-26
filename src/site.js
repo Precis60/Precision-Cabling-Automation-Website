@@ -5,7 +5,6 @@ export const SITE = {
   phoneTel: "+61413729663",
   adminEmail: "admin@precisioncabling.com.au",
   supportEmail: "support@precisioncabling.com.au",
-  street: "15a Hawkhurst Street",
   locality: "Yarraville VIC 3013",
   abn: "ABN: 94 921 400 822",
   pagesUrl: "https://precis60.github.io/Precision-Cabling-Automation-Website/",
