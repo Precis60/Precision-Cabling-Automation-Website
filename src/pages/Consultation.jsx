@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import Seo from "../components/Seo";
 import EnquiryForm from "../components/EnquiryForm";
 import { SITE } from "../site";
@@ -8,17 +7,15 @@ export default function Consultation() {
     <>
       <Seo
         title="Book a consultation | Precision Cabling & Automation"
-        description="A consultation for homes and commercial sites of any size. Session scope, who should attend, duration, and the options memo. Fees confirmed on enquiry. We install and program the work we design."
+        description="A 60–90 minute consultation. You leave with an options memo, a schematic where it helps, and budget bands. Fees confirmed on enquiry. We install and program the work we design."
         path="/consultation"
       />
       <section className="narrow-hero">
         <div className="wrap">
           <span className="kicker">Consultation</span>
-          <h1>The front door for the work.</h1>
+          <h1>Book a consultation</h1>
           <p className="lede">
-            A consultation is how a project starts. It is a working session on the site and the systems,
-            and it leads, when the fit is right, to design, specification, installation, and programming.
-            We take that path on projects of any size.
+            A working session on the site and the systems. When the fit is right, it leads to design, installation and programming.
           </p>
         </div>
       </section>
@@ -29,7 +26,7 @@ export default function Consultation() {
             <li>
               <span className="label">Fee</span>
               <strong>Confirmed on enquiry</strong>
-              <span>Consultation fees confirmed on enquiry.</span>
+              <span>No published dollar figure.</span>
             </li>
             <li>
               <span className="label">Duration</span>
@@ -52,48 +49,43 @@ export default function Consultation() {
         </div>
       </section>
 
-      <section className="section">
+      <section className="section" aria-label="What the consultation includes">
         <div className="wrap prose">
-          <h2>What the session covers</h2>
-          <ul>
-            <li>How the place is used, and by whom.</li>
-            <li>Which systems are in play: security and access, networks, lighting and automation, AV and collaboration, and garden and landscape maintenance when the grounds are part of the brief.</li>
-            <li>Constraints already set by the architecture, the builder, existing plant, timing, and discretion.</li>
-            <li>What handover has to look like, including who will operate the system day to day.</li>
-          </ul>
-
-          <h2>Who should attend</h2>
-          <p>
-            The person who can decide, and the architect, builder, or facilities lead if one is already appointed.
-            A small group is enough. We do not need every stakeholder in the room to begin.
-          </p>
-
-          <h2>What you leave with</h2>
-          <p>
-            An options memo. A schematic when a drawing will make the decision clearer.
-            Budget bands for the paths worth taking. If you engage us beyond the consultation, that memo becomes the start of specification, then installation and programming.
-          </p>
-
-          <h2>What follows</h2>
-          <p>After the consultation, a typical engagement is one of these:</p>
-          <ul>
-            <li>Design, specification, installation, and programming — we deliver the system.</li>
-            <li>Design and specification for a builder or another trade, where you want the documents and will arrange delivery separately.</li>
-            <li>Care of a system already installed: adjustments, programming changes, and urgent call-out.</li>
-          </ul>
-
-          <h2>Whether we take the work</h2>
-          <p>
-            Residential and commercial projects of any size are welcome when the systems need to be thought through and then installed or programmed as one job.
-            We confirm that fit before the session is booked. We step back when the request is only a box of product, or when we cannot be the accountable party for the outcome.
-            An urgent fault can be called in without waiting for this process.
-          </p>
-          <p>
-            Consultation fees confirmed on enquiry. There is no published dollar figure until that is set.
-          </p>
-          <p>
-            <Link to="/contact?intent=consultation">Prefer to write first? Use the contact form.</Link>
-          </p>
+          <div className="disclosure">
+            <details>
+              <summary>What it covers</summary>
+              <div className="disclosure-body">
+                <ul>
+                  <li>How the place is used, and by whom.</li>
+                  <li>Security and access, networks, lighting and automation, AV, and garden maintenance when the grounds are in the brief.</li>
+                  <li>Constraints already set by the architecture, the builder, existing plant, timing, and discretion.</li>
+                  <li>What handover has to look like, and who operates the system.</li>
+                  <li>The person who can decide, plus the architect, builder, or facilities lead if one is appointed. A small group is enough.</li>
+                </ul>
+              </div>
+            </details>
+            <details>
+              <summary>What you leave with</summary>
+              <div className="disclosure-body">
+                <p>
+                  An options memo, a schematic when a drawing helps, and budget bands. If you continue with us, that memo starts the specification, then installation and programming.
+                </p>
+              </div>
+            </details>
+            <details>
+              <summary>What follows</summary>
+              <div className="disclosure-body">
+                <ul>
+                  <li>Design, specification, installation, and programming — we deliver the system.</li>
+                  <li>Design and specification for a builder or another trade, where you want the documents and will arrange delivery separately.</li>
+                  <li>Care of a system already installed: adjustments, programming changes, and urgent call-out.</li>
+                </ul>
+                <p>
+                  Projects of any size are welcome. We confirm the fit before booking, and we step back if the request is only a box of product or we cannot be accountable. An urgent fault can be called without this process.
+                </p>
+              </div>
+            </details>
+          </div>
         </div>
       </section>
 
@@ -102,11 +94,11 @@ export default function Consultation() {
           <div>
             <h2 id="book-title">Book the session</h2>
             <p>
-              Send the site type, the systems, and the timing. We reply from {SITE.email} with the fee and the next available session.
+              Tell us the site, the systems, and the timing. We reply from {SITE.email} with the fee and the next session.
             </p>
             <p className="callout">
-              If something has failed and the site cannot wait, call{" "}
-              <a href={`tel:${SITE.phoneTel}`}>{SITE.phoneDisplay}</a>. Urgent support and call-out are available 24 hours.
+              If it cannot wait, call{" "}
+              <a href={`tel:${SITE.phoneTel}`}>{SITE.phoneDisplay}</a>. Urgent support is available 24 hours.
             </p>
           </div>
           <div className="form-panel">

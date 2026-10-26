@@ -11,15 +11,23 @@ export const SITE = {
 
 export const NAV = [
   { to: "/", label: "Home", end: true },
-  { to: "/services", label: "Services" },
-  { to: "/home-garden", label: "Home & Garden" },
-  { to: "/work", label: "Work" },
+  { to: "/services", label: "Services", menu: "services" },
   { to: "/consultation", label: "Consultation" },
   { to: "/about-us", label: "About" },
   { to: "/contact", label: "Contact" },
 ];
 
 export const EXPERIENCE = "15 years in high-end residential work";
+
+/**
+ * Shop link for a future Shopify storefront.
+ * Set enabled to true and href to the store URL to show it in the header and footer.
+ */
+export const SHOP_NAV = {
+  enabled: false,
+  label: "Shop",
+  href: "",
+};
 
 export const SERVICE_AREAS = [
   {
@@ -69,65 +77,26 @@ export const SERVICE_AREAS = [
 
 export const AREA_SUMMARY = "Melbourne, the Mornington Peninsula, and the Bellarine";
 
-export const PILLARS = [
-  {
-    id: "security",
-    title: "Security & access",
-    summary:
-      "Access, intercom, CCTV, and alarms as one system, then installed and programmed.",
-  },
-  {
-    id: "networks",
-    title: "Networks & infrastructure",
-    summary:
-      "Structured cabling, switching, and wireless. Specified, pulled, and commissioned.",
-  },
-  {
-    id: "lighting",
-    title: "Lighting & automation",
-    summary:
-      "Control designed around how the place is used, then programmed and handed over.",
-  },
-  {
-    id: "av",
-    title: "AV & collaboration",
-    summary:
-      "Display, audio, and control for living rooms and meeting rooms, installed with the other systems.",
-  },
-  {
-    id: "garden",
-    title: "Home & garden maintenance",
-    summary:
-      "Scheduled care of the house, garden, and grounds, for homes and commercial sites.",
-    to: "/home-garden",
-  },
-];
-
 export const PROCESS = [
   {
     step: "01",
-    title: "Discover",
-    text: "We walk the site, or the drawings: how it is used, what is already installed, and what must stay discreet.",
+    title: "Consult",
+    text: "We walk the site and understand how it's used.",
   },
   {
     step: "02",
     title: "Design",
-    text: "Security, network, lighting, and AV drawn as one system, with the risks and the joins made explicit.",
+    text: "Security, network, lighting and AV planned as one system.",
   },
   {
     step: "03",
-    title: "Specify",
-    text: "Equipment, pathways, and responsibilities written down, so the work can be priced and delivered.",
+    title: "Install & program",
+    text: "Our team installs, programs and commissions everything.",
   },
   {
     step: "04",
-    title: "Deliver",
-    text: "We install and program. The practice that advised you is on site for the fit-off.",
-  },
-  {
-    step: "05",
-    title: "Handover",
-    text: "Operating notes, a path for maintenance, and urgent faults by phone at any hour.",
+    title: "Support",
+    text: "Clear handover, maintenance options and 24/7 urgent support.",
   },
 ];
 
@@ -163,11 +132,12 @@ export const SITE_TYPES = [
 ];
 
 export const SYSTEM_OPTIONS = [
-  "Security & access",
-  "Networks & infrastructure",
+  "Security & CCTV",
+  "Access & intercom",
+  "Networks & cabling",
   "Lighting & automation",
-  "AV & collaboration",
-  "Home & garden maintenance",
+  "AV & meeting rooms",
+  "Home & garden",
   "Not sure yet",
 ];
 

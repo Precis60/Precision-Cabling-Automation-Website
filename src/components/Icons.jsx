@@ -14,6 +14,16 @@ const stroke = {
   strokeLinejoin: "round",
 };
 
+export function IconAccess() {
+  return (
+    <Svg>
+      <path d="M6.5 14.5h19v11h-19z" {...stroke} />
+      <path d="M6.5 14.5 16 7.2l9.5 7.3" {...stroke} />
+      <circle cx="16" cy="20" r="1.3" {...stroke} />
+    </Svg>
+  );
+}
+
 export function IconSecurity() {
   return (
     <Svg>
