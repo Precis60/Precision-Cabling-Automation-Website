@@ -19,20 +19,55 @@ export const NAV = [
   { to: "/contact", label: "Contact" },
 ];
 
-export const SUBURBS = [
-  "Yarraville",
-  "Seddon",
-  "Kingsville",
-  "West Footscray",
-  "Footscray",
-  "Spotswood",
-  "Newport",
-  "South Kingsville",
-  "Williamstown",
-  "Altona North",
-  "Maribyrnong",
-  "Maidstone",
+export const EXPERIENCE = "15 years in high-end residential work";
+
+export const SERVICE_AREAS = [
+  {
+    region: "Melbourne",
+    suburbs: [
+      "Toorak",
+      "South Yarra",
+      "Armadale",
+      "Malvern",
+      "Kew",
+      "Hawthorn",
+      "Canterbury",
+      "Camberwell",
+      "Balwyn",
+      "Brighton",
+      "Sandringham",
+      "Black Rock",
+      "Albert Park",
+      "Middle Park",
+    ],
+  },
+  {
+    region: "Mornington Peninsula",
+    suburbs: [
+      "Portsea",
+      "Sorrento",
+      "Blairgowrie",
+      "Red Hill",
+      "Merricks",
+      "Flinders",
+      "Shoreham",
+      "Mount Martha",
+      "Mornington",
+    ],
+  },
+  {
+    region: "Bellarine Peninsula",
+    suburbs: [
+      "Barwon Heads",
+      "Point Lonsdale",
+      "Queenscliff",
+      "Ocean Grove",
+      "Portarlington",
+    ],
+  },
 ];
+
+export const AREA_SUMMARY = "Melbourne, the Mornington Peninsula, and the Bellarine";
 
 export const PILLARS = [
   {

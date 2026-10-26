@@ -9,7 +9,7 @@ export default function About() {
     <>
       <Seo
         title="About | Precision Cabling & Automation"
-        description="Precision Cabling & Automation is led by Jamie Anderson in Yarraville. Consultation, specification, installation, programming and ongoing support for homes and commercial sites."
+        description="Precision Cabling & Automation is led by Jamie Anderson, with 15 years in high-end residential work. Consultation, installation, programming and support across Melbourne, the Mornington Peninsula, and the Bellarine."
         path="/about-us"
       />
       <section className="narrow-hero">
@@ -17,7 +17,7 @@ export default function About() {
           <span className="kicker">About</span>
           <h1>Precision Cabling &amp; Automation</h1>
           <p className="lede">
-            A Yarraville practice for security, networks, lighting control, AV, and home and garden maintenance.
+            A practice for security, networks, lighting control, AV, and home and garden maintenance, working across Melbourne, the Mornington Peninsula, and the Bellarine.
             The work runs from the first consultation through installation, programming, handover, and maintenance.
           </p>
         </div>
@@ -28,7 +28,7 @@ export default function About() {
           <div className="prose">
             <h2>Jamie Anderson, principal</h2>
             <p>
-              Jamie Anderson is the principal. He consults on the building, specifies the systems, and stays for installation and programming.
+              Jamie Anderson is the principal, with 15 years in high-end residential work. He consults on the building, specifies the systems, and stays for installation and programming.
               Clients deal with him from the first meeting through handover. Where a project needs other trades, they work to a scope he remains accountable for.
             </p>
             <p>

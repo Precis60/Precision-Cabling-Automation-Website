@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom";
 import Seo from "../components/Seo";
 import ConsultBand from "../components/ConsultBand";
+import ServiceAreas from "../components/ServiceAreas";
 import { IconAv, IconGarden, IconLighting, IconNetwork, IconSecurity } from "../components/Icons";
 import { imageSrc } from "../images";
-import { CASE_STUDIES, PILLARS, PROCESS, SITE, SUBURBS } from "../site";
+import { AREA_SUMMARY, CASE_STUDIES, EXPERIENCE, PILLARS, PROCESS, SERVICE_AREAS, SITE } from "../site";
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -20,9 +21,9 @@ const jsonLd = {
     postalCode: "3013",
     addressCountry: "AU",
   },
-  areaServed: SUBURBS,
+  areaServed: SERVICE_AREAS.flatMap((area) => [area.region, ...area.suburbs]),
   description:
-    "Consultation, design, installation and programming for security, networks, lighting control and AV, plus home and garden maintenance, on residential and commercial sites.",
+    `Consultation, design, installation and programming for security, networks, lighting control and AV, plus home and garden maintenance, for high-end residences and commercial sites across ${AREA_SUMMARY}. ${EXPERIENCE}.`,
 };
 
 const AUDIENCES = [
@@ -43,7 +44,7 @@ const AUDIENCES = [
 const FACTS = [
   ["01", "Consultation first"],
   ["02", "We install and program"],
-  ["03", "Projects of any size"],
+  ["03", "15 years in high-end residential"],
   ["04", "Urgent support, 24 hours"],
 ];
 
@@ -93,14 +94,14 @@ export default function Home() {
     <>
       <Seo
         title="Precision Cabling & Automation | Consultation, design and delivery"
-        description="Technology consulting, installation and programming for homes and commercial sites of any size. Security, networks, lighting control, AV, and home and garden maintenance. Book a consultation in Yarraville."
+        description="Technology consulting, installation and programming for homes and commercial sites of any size. Security, networks, lighting control, AV, and home and garden maintenance across Melbourne, the Mornington Peninsula, and the Bellarine. 15 years in high-end residential work."
         path="/"
         jsonLd={jsonLd}
       />
       <section className="hero">
         <div className="wrap hero-grid">
           <div className="hero-copy">
-            <span className="kicker">Yarraville · Residential and commercial</span>
+            <span className="kicker">Melbourne · Mornington Peninsula · Bellarine</span>
             <h1>Consultation and delivery for complex homes and commercial&nbsp;sites.</h1>
             <p className="lede">
               Security, networks, lighting control, and AV, designed as one system.
@@ -151,10 +152,8 @@ export default function Home() {
               </article>
             ))}
           </div>
-          <p className="principal">Jamie Anderson is the principal and the accountable contact.</p>
           <p className="principal">
-            Based in Yarraville, working across Melbourne’s inner west —{" "}
-            {SUBURBS.slice(1).join(", ")} — and further afield by arrangement.
+            Jamie Anderson is the principal and the accountable contact, with {EXPERIENCE}.
           </p>
         </div>
       </section>
@@ -284,6 +283,8 @@ export default function Home() {
           </p>
         </div>
       </section>
+
+      <ServiceAreas text={`Prestige homes and estates across ${AREA_SUMMARY}, where discretion and finish matter as much as the systems.`} />
 
       <ConsultBand />
     </>

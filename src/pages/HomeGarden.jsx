@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom";
 import Seo from "../components/Seo";
 import ConsultBand from "../components/ConsultBand";
+import ServiceAreas from "../components/ServiceAreas";
 import { IconGarden, IconHome } from "../components/Icons";
 import { imageSrc } from "../images";
-import { SUBURBS } from "../site";
+import { AREA_SUMMARY } from "../site";
 
 const SECTIONS = [
   { id: "home", label: "Home upkeep" },
@@ -27,7 +28,7 @@ const FAQS = [
   },
   {
     q: "Is the practice insured?",
-    a: "Credentials, including insurance, are published on the home page as they are confirmed. Ask on enquiry and the current certificate is sent with the scope.",
+    a: "Ask on enquiry and the current insurance certificate is sent with the scope, along with any licences that apply to the work.",
   },
   {
     q: "One-off visit, or a regular schedule?",
@@ -54,7 +55,7 @@ export default function HomeGarden() {
     <>
       <Seo
         title="Home & Garden Maintenance | Precision Cabling & Automation"
-        description="A dedicated home and garden maintenance service from the same Yarraville practice. House upkeep, gardens and grounds, on an agreed visit interval, for residential and commercial sites."
+        description="Home and garden maintenance for prestige homes across Melbourne, the Mornington Peninsula, and the Bellarine. House upkeep, gardens and grounds, on an agreed visit interval."
         path="/home-garden"
         jsonLd={jsonLd}
       />
@@ -177,9 +178,6 @@ export default function HomeGarden() {
           <p className="after-block">
             Where the site already has our irrigation, outdoor lighting, or access systems, the maintenance visit is arranged around them.
           </p>
-          <p className="after-block">
-            Visits run across Yarraville and Melbourne’s inner west — {SUBURBS.slice(1).join(", ")} — with wider travel by arrangement.
-          </p>
         </div>
       </section>
 
@@ -199,6 +197,8 @@ export default function HomeGarden() {
           </div>
         </div>
       </section>
+
+      <ServiceAreas text={`Regular and seasonal visits to homes and holiday properties across ${AREA_SUMMARY}.`} />
 
       <ConsultBand
         title="Arrange a maintenance visit"
