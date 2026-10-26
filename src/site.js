@@ -122,14 +122,6 @@ export const CASE_STUDIES = [
   },
 ];
 
-export const CREDENTIALS = [
-  { label: "ABN", value: "94 921 400 822" },
-  { label: "Public liability", value: "[to be confirmed]" },
-  { label: "Professional indemnity", value: "[to be confirmed]" },
-  { label: "Licences", value: "[to be confirmed]" },
-  { label: "Manufacturer relationships", value: "[to be confirmed]" },
-];
-
 export const SITE_TYPES = [
   "Private residence",
   "Multi-residence",

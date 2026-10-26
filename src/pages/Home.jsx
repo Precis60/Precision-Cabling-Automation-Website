@@ -3,7 +3,7 @@ import Seo from "../components/Seo";
 import ConsultBand from "../components/ConsultBand";
 import { IconAv, IconGarden, IconLighting, IconNetwork, IconSecurity } from "../components/Icons";
 import { imageSrc } from "../images";
-import { CASE_STUDIES, CREDENTIALS, PILLARS, PROCESS, SITE, SUBURBS } from "../site";
+import { CASE_STUDIES, PILLARS, PROCESS, SITE, SUBURBS } from "../site";
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -283,26 +283,6 @@ export default function Home() {
           <p className="after-block">
             <Link className="more" to="/work">Open the work page</Link>
           </p>
-        </div>
-      </section>
-
-      <section className="section" aria-labelledby="credentials-title">
-        <div className="wrap">
-          <div className="section-head">
-            <h2 id="credentials-title">Credentials</h2>
-            <p className="placeholder-note">
-              Placeholder strip. Insurance, licences, and manufacturer relationships are shown only once confirmed. No partner logos until the principal names the firms this practice specifies and installs.
-            </p>
-          </div>
-          <ul className="cred-list">
-            {CREDENTIALS.map((item) => (
-              <li key={item.label}>
-                <span className="label">Placeholder</span>
-                <strong>{item.label}</strong>
-                <span>{item.value}</span>
-              </li>
-            ))}
-          </ul>
         </div>
       </section>
 

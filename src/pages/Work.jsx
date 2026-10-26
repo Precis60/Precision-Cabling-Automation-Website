@@ -1,7 +1,6 @@
-import { Link } from "react-router-dom";
 import Seo from "../components/Seo";
 import ConsultBand from "../components/ConsultBand";
-import { CASE_STUDIES, CREDENTIALS } from "../site";
+import { CASE_STUDIES } from "../site";
 
 export default function Work() {
   return (
@@ -36,29 +35,6 @@ export default function Work() {
               </div>
             </article>
           ))}
-        </div>
-      </section>
-      <section className="section">
-        <div className="wrap">
-          <div className="section-head">
-            <h2>Credentials</h2>
-            <p className="placeholder-note">
-              Insurance, licences, and the manufacturers this practice specifies are listed here once confirmed.
-              Empty on purpose.
-            </p>
-          </div>
-          <ul className="cred-list">
-            {CREDENTIALS.map((item) => (
-              <li key={item.label}>
-                <span className="label">Placeholder</span>
-                <strong>{item.label}</strong>
-                <span>{item.value}</span>
-              </li>
-            ))}
-          </ul>
-          <p className="after-block">
-            <Link className="more" to="/consultation">Discuss a current project</Link>
-          </p>
         </div>
       </section>
       <ConsultBand />
