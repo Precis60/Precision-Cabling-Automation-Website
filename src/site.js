@@ -7,7 +7,7 @@ export const SITE = {
   supportEmail: "support@precisioncabling.com.au",
   street: "15a Hawkhurst Street",
   locality: "Yarraville VIC 3013",
-  abn: "ABN: [to be confirmed]",
+  abn: "ABN: 94 921 400 822",
   pagesUrl: "https://precis60.github.io/Precision-Cabling-Automation-Website/",
 };
 
@@ -108,7 +108,7 @@ export const CASE_STUDIES = [
 ];
 
 export const CREDENTIALS = [
-  { label: "ABN", value: "[to be confirmed]" },
+  { label: "ABN", value: "94 921 400 822" },
   { label: "Public liability", value: "[to be confirmed]" },
   { label: "Professional indemnity", value: "[to be confirmed]" },
   { label: "Licences", value: "[to be confirmed]" },

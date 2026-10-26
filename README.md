@@ -58,7 +58,7 @@ DNS is not changed by this repository.
 - admin@precisioncabling.com.au
 - support@precisioncabling.com.au
 
-ABN, consultation fee, insurance, licences, and case-study narratives are marked as placeholders until the principal supplies them.
+Consultation fee, insurance, licences, and case-study narratives are marked as placeholders until the principal supplies them.
 
 ## Photographs
 
