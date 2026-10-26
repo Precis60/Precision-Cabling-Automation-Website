@@ -1,8 +1,7 @@
 import { Link } from "react-router-dom";
 import Seo from "../components/Seo";
-import ConsultBand from "../components/ConsultBand";
 import { imageSrc } from "../images";
-import { PROCESS } from "../site";
+import { EXPERIENCE } from "../site";
 
 export default function About() {
   return (
@@ -16,24 +15,21 @@ export default function About() {
         <div className="wrap">
           <span className="kicker">About</span>
           <h1>Precision Cabling &amp; Automation</h1>
-          <p className="lede">
-            A practice for security, networks, lighting control, AV, and home and garden maintenance, working across Melbourne, the Mornington Peninsula, and the Bellarine.
-            The work runs from the first consultation through installation, programming, handover, and maintenance.
-          </p>
         </div>
       </section>
 
       <section className="section light">
         <div className="wrap about-grid">
           <div className="prose">
-            <h2>Jamie Anderson, principal</h2>
+            <h2>Jamie Anderson</h2>
             <p>
-              Jamie Anderson is the principal, with 15 years in high-end residential work. He consults on the building, specifies the systems, and stays for installation and programming.
-              Clients deal with him from the first meeting through handover. Where a project needs other trades, they work to a scope he remains accountable for.
+              Jamie Anderson is the principal, with {EXPERIENCE}. He consults on the building, specifies the systems, and stays for installation and programming. Clients deal with him from the first meeting through handover. Where a project needs other trades, they work to a scope he remains accountable for.
             </p>
             <p>
-              The practice advises private clients and project teams on residences and on commercial sites, including large ones, and it also takes smaller jobs that still need the same care.
-              The consultation decides the right scope, then the practice carries it out.
+              The practice works across Melbourne, the Mornington Peninsula and the Bellarine. Private clients, architects, builders, and the people who run a building all start with a consultation. It covers residences and commercial sites, including large ones, and smaller jobs that still need the same care. Security, networks, lighting control, AV, and home and garden maintenance run from that consultation through handover. Maintenance and urgent call-out stay with the same contact.
+            </p>
+            <p>
+              <Link className="button" to="/consultation">Book a consultation</Link>
             </p>
           </div>
           <figure className="about-figure">
@@ -48,28 +44,6 @@ export default function About() {
           </figure>
         </div>
       </section>
-
-      <section className="section">
-        <div className="wrap">
-          <div className="section-head">
-            <h2>How the practice operates</h2>
-            <p>Design, specify, deliver, maintain.</p>
-          </div>
-          <div className="process">
-            {PROCESS.map((item) => (
-              <article className="step" key={item.step}>
-                <span className="num">{item.step}</span>
-                <h3>{item.title}</h3>
-                <p>{item.text}</p>
-              </article>
-            ))}
-          </div>
-          <p className="after-block">
-            <Link className="button" to="/consultation">Book a consultation</Link>
-          </p>
-        </div>
-      </section>
-      <ConsultBand />
     </>
   );
 }

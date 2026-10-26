@@ -1,10 +1,9 @@
 import { Link } from "react-router-dom";
 import Seo from "../components/Seo";
-import ConsultBand from "../components/ConsultBand";
 import ServiceAreas from "../components/ServiceAreas";
-import { IconAv, IconGarden, IconLighting, IconNetwork, IconSecurity } from "../components/Icons";
+import ServiceCards from "../components/ServiceCards";
 import { imageSrc } from "../images";
-import { AREA_SUMMARY, CASE_STUDIES, EXPERIENCE, PILLARS, PROCESS, SERVICE_AREAS, SITE } from "../site";
+import { AREA_SUMMARY, EXPERIENCE, PROCESS, SERVICE_AREAS, SITE } from "../site";
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -23,95 +22,49 @@ const jsonLd = {
   },
   areaServed: SERVICE_AREAS.flatMap((area) => [area.region, ...area.suburbs]),
   description:
-    `Consultation, design, installation and programming for security, networks, lighting control and AV, plus home and garden maintenance, for high-end residences and commercial sites across ${AREA_SUMMARY}. ${EXPERIENCE}.`,
+    `Consultation-led design, installation and programming for security, networks, lighting, AV, and home and garden maintenance across ${AREA_SUMMARY}. ${EXPERIENCE}.`,
 };
-
-const AUDIENCES = [
-  {
-    title: "Private clients",
-    text: "A single residence, including a smaller job that still needs the same care.",
-  },
-  {
-    title: "Architects and builders",
-    text: "A fit-out or a build, where the systems are designed with the drawings.",
-  },
-  {
-    title: "People who run a building",
-    text: "A large commercial site. It starts the same way, and the consultation stays through handover.",
-  },
-];
 
 const FACTS = [
-  ["01", "Consultation first"],
-  ["02", "We install and program"],
-  ["03", "15 years in high-end residential"],
-  ["04", "Urgent support, 24 hours"],
+  "Consultation first",
+  "15 years in high-end residential",
+  "We install and program",
+  "24/7 urgent support",
+  "Melbourne · Mornington Peninsula · Bellarine",
 ];
 
-const ICONS = {
-  security: IconSecurity,
-  networks: IconNetwork,
-  lighting: IconLighting,
-  av: IconAv,
-  garden: IconGarden,
-};
-
-const TILES = {
-  security: {
-    file: "service-security.jpg",
-    width: 1400,
-    height: 933,
-    alt: "Illustrative photograph of a bright interior. Not a project by this practice.",
-  },
-  networks: {
-    file: "service-networks.jpg",
-    width: 1400,
-    height: 934,
-    alt: "Illustrative photograph of network equipment racks. Not a project by this practice.",
-  },
-  lighting: {
-    file: "service-lighting.jpg",
-    width: 1400,
-    height: 934,
-    alt: "Illustrative photograph of interior lighting. Not a project by this practice.",
-  },
-  av: {
-    file: "service-av.jpg",
-    width: 1400,
-    height: 934,
-    alt: "Illustrative photograph of a living room with a screen. Not a project by this practice.",
-  },
-  garden: {
-    file: "service-garden.jpg",
-    width: 1400,
-    height: 933,
-    alt: "Illustrative photograph of a maintained garden. Not a project by this practice.",
-  },
-};
+function exploreServices() {
+  const target = document.getElementById("services");
+  if (!target) return;
+  const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  target.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "start" });
+}
 
 export default function Home() {
   return (
     <>
       <Seo
-        title="Precision Cabling & Automation | Consultation, design and delivery"
-        description="Technology consulting, installation and programming for homes and commercial sites of any size. Security, networks, lighting control, AV, and home and garden maintenance across Melbourne, the Mornington Peninsula, and the Bellarine. 15 years in high-end residential work."
+        title="Precision Cabling & Automation | Security, networks, lighting and AV"
+        description="Consultation-led design, then installed and programmed, for security, networks, lighting and AV across Melbourne, the Mornington Peninsula and the Bellarine. 15 years in high-end residential work."
         path="/"
         jsonLd={jsonLd}
       />
       <section className="hero">
         <div className="wrap hero-grid">
           <div className="hero-copy">
-            <span className="kicker">Melbourne · Mornington Peninsula · Bellarine</span>
-            <h1>Consultation and delivery for complex homes and commercial&nbsp;sites.</h1>
+            <h1>Security, networks, lighting and AV for premium homes and commercial sites.</h1>
             <p className="lede">
-              Security, networks, lighting control, and AV, designed as one system.
-              We advise on projects of any size, then install and program the work ourselves.
-              Home and garden maintenance is offered on the same sites.
+              Consultation-led design, then installed and programmed by us across Melbourne, the Mornington Peninsula and the Bellarine.
             </p>
             <div className="hero-actions">
               <Link className="button" to="/consultation">Book a consultation</Link>
-              <Link className="button secondary" to="/contact?intent=assessment">Request a site assessment</Link>
+              <button className="button secondary" type="button" onClick={exploreServices}>
+                Explore services
+              </button>
             </div>
+            <p className="hero-urgent">
+              Urgent fault? Call <a href={`tel:${SITE.phoneTel}`}>{SITE.phoneDisplay}</a>, 24/7.
+            </p>
           </div>
           <figure className="hero-figure">
             <img
@@ -124,127 +77,16 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="fact-strip" aria-label="How the practice works">
-        <ul className="wrap">
-          {FACTS.map(([num, label]) => (
-            <li key={num}>
-              <span>{num}</span>
-              {label}
-            </li>
-          ))}
-        </ul>
-      </section>
-
-      <section className="section light">
+      <section className="section" id="services" aria-labelledby="services-title">
         <div className="wrap">
-          <div className="section-head">
-            <h2>Who we advise</h2>
-            <p>
-              Private clients, architects, builders, and the people who run a building.
-              Each engagement starts with a consultation that stays through specification, installation, programming, and handover.
-            </p>
-          </div>
-          <div className="audience">
-            {AUDIENCES.map((item) => (
-              <article key={item.title}>
-                <h3>{item.title}</h3>
-                <p>{item.text}</p>
-              </article>
-            ))}
-          </div>
-          <p className="principal">
-            Jamie Anderson is the principal and the accountable contact, with {EXPERIENCE}.
-          </p>
+          <h2 id="services-title">Services</h2>
+          <ServiceCards />
         </div>
       </section>
 
-      <section className="section" aria-labelledby="pillars-title">
+      <section className="section light" id="how-we-work" aria-labelledby="process-title">
         <div className="wrap">
-          <div className="section-head">
-            <h2 id="pillars-title">Five services, one practice</h2>
-            <p>Each service is scoped in consultation, then carried out by this practice.</p>
-          </div>
-          <div className="service-grid">
-            {PILLARS.map((pillar) => {
-              const Icon = ICONS[pillar.id];
-              const tile = TILES[pillar.id];
-              return (
-                <article className="service-tile" key={pillar.id}>
-                  <img
-                    src={imageSrc(tile.file)}
-                    alt={tile.alt}
-                    width={tile.width}
-                    height={tile.height}
-                    loading="lazy"
-                    decoding="async"
-                  />
-                  <div className="service-tile-body">
-                    <h3>
-                      <Icon />
-                      {pillar.title}
-                    </h3>
-                    <p>{pillar.summary}</p>
-                    <Link className="more" to={pillar.to || `/services?pillar=${pillar.id}`}>Read the approach</Link>
-                  </div>
-                </article>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      <section className="bleed" aria-label="Illustrative commercial interior">
-        <img
-          src={imageSrc("band-commercial.jpg")}
-          alt="Illustrative photograph of a commercial interior. Not a project by this practice."
-          width="2000"
-          height="857"
-          loading="lazy"
-          decoding="async"
-        />
-        <div className="wrap">
-          <div className="bleed-card">
-            <p>Designed as one system, then installed and programmed by the same practice.</p>
-          </div>
-        </div>
-      </section>
-
-      <section className="section light">
-        <div className="wrap">
-          <div className="section-head">
-            <h2>How an engagement starts</h2>
-            <p>
-              The front door is a consultation. From there we design, specify, and deliver — installation and programming included — and we remain available after handover.
-            </p>
-          </div>
-          <div className="grid-2">
-            <article className="panel">
-              <h3>Consultation first</h3>
-              <p>
-                The session covers the site, the systems, and a deliverable you can decide from: an options memo, a schematic where it helps, and budget bands. Fees are confirmed on enquiry.
-              </p>
-              <Link className="more" to="/consultation">See what the session includes</Link>
-            </article>
-            <article className="panel">
-              <h3>Then we build it</h3>
-              <p>
-                If the work fits, the same practice specifies the equipment and carries out installation and programming. Any size is in scope, provided we can be accountable for the outcome.
-              </p>
-              <p className="urgent">
-                Urgent faults do not wait on a consultation. Call{" "}
-                <a href={`tel:${SITE.phoneTel}`}>{SITE.phoneDisplay}</a>. Support and call-out are available 24 hours.
-              </p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section className="section" aria-labelledby="process-title">
-        <div className="wrap">
-          <div className="section-head">
-            <h2 id="process-title">How we work</h2>
-            <p>Discover, design, specify, deliver, handover. Delivery means we install and program.</p>
-          </div>
+          <h2 id="process-title">How we work</h2>
           <div className="process">
             {PROCESS.map((item) => (
               <article className="step" key={item.step}>
@@ -257,36 +99,30 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section light" aria-labelledby="work-title">
-        <div className="wrap">
-          <div className="section-head">
-            <h2 id="work-title">Selected work</h2>
-            <p>
-              Three anonymised studies are reserved below. Narratives and outcomes will be added when they can be published. Nothing here is a claimed result.
-            </p>
-          </div>
-          <div className="grid-3">
-            {CASE_STUDIES.map((study) => (
-              <article className="study" key={study.id}>
-                <div className="study-empty">Photography withheld</div>
-                <div className="study-body">
-                  <span className="kicker">{study.label}</span>
-                  <h3>{study.title}</h3>
-                  <p>{study.text}</p>
-                  <span className="tag">{study.systems}</span>
-                </div>
-              </article>
-            ))}
-          </div>
-          <p className="after-block">
-            <Link className="more" to="/work">Open the work page</Link>
-          </p>
-        </div>
+      <section className="fact-strip" aria-label="Practice facts">
+        <ul className="wrap">
+          {FACTS.map((label, index) => (
+            <li key={label}>
+              <span>{String(index + 1).padStart(2, "0")}</span>
+              {label}
+            </li>
+          ))}
+        </ul>
       </section>
 
-      <ServiceAreas text={`Prestige homes and estates across ${AREA_SUMMARY}, where discretion and finish matter as much as the systems.`} />
-
-      <ConsultBand />
+      <section className="cta-band">
+        <div className="wrap">
+          <div className="inner">
+            <div>
+              <h2>Tell us about your site and we'll recommend the right next step.</h2>
+              <div className="hero-actions">
+                <Link className="button" to="/consultation">Book a consultation</Link>
+              </div>
+            </div>
+          </div>
+          <ServiceAreas collapsible />
+        </div>
+      </section>
     </>
   );
 }

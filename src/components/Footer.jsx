@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
-import { SITE } from "../site";
+import { SERVICES } from "../serviceContent";
+import { SHOP_NAV, SITE } from "../site";
 
 export default function Footer() {
   return (
@@ -21,12 +22,19 @@ export default function Footer() {
         <div>
           <strong>Visit</strong>
           <ul>
+            <li><Link to="/">Home</Link></li>
             <li><Link to="/services">Services</Link></li>
-            <li><Link to="/home-garden">Home &amp; Garden</Link></li>
+            {SERVICES.map((service) => (
+              <li key={service.slug}>
+                <Link to={`/services/${service.slug}`}>{service.title}</Link>
+              </li>
+            ))}
             <li><Link to="/consultation">Consultation</Link></li>
-            <li><Link to="/work">Work</Link></li>
             <li><Link to="/about-us">About</Link></li>
             <li><Link to="/contact">Contact</Link></li>
+            {SHOP_NAV.enabled && SHOP_NAV.href ? (
+              <li><a href={SHOP_NAV.href}>{SHOP_NAV.label}</a></li>
+            ) : null}
           </ul>
         </div>
         <div>
