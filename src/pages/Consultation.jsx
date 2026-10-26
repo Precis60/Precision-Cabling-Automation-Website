@@ -102,7 +102,7 @@ export default function Consultation() {
           <div>
             <h2 id="book-title">Book the session</h2>
             <p>
-              Send the site type, the systems, and the timing. We reply from {SITE.adminEmail} with the fee and the next available session.
+              Send the site type, the systems, and the timing. We reply from {SITE.email} with the fee and the next available session.
             </p>
             <p className="callout">
               If something has failed and the site cannot wait, call{" "}

@@ -22,7 +22,7 @@ export default function Terms() {
           </p>
           <p>
             The public name of the practice is {SITE.name}. The previous terms named the operator as Precision Cabling Suppliers.
-            If the registered entity name differs, it will be confirmed with the ABN. Until then, contact {SITE.adminEmail}.
+            If the registered entity name differs, it will be confirmed with the ABN. Until then, contact {SITE.email}.
           </p>
           <p>
             By using this site, you indicate that you have read these terms and agree to abide by them.
@@ -118,7 +118,7 @@ export default function Terms() {
           <h2>Contact</h2>
           <p>
             {SITE.locality}<br />
-            Email: <a href={`mailto:${SITE.adminEmail}`}>{SITE.adminEmail}</a><br />
+            Email: <a href={`mailto:${SITE.email}`}>{SITE.email}</a><br />
             Mobile: <a href={`tel:${SITE.phoneTel}`}>{SITE.phoneDisplay}</a>
           </p>
           <p>

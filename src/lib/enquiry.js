@@ -19,7 +19,7 @@ export function mailtoHref(data) {
   const subject = encodeURIComponent(`${data.enquiryLabel} — ${data.name}`);
   const body = encodeURIComponent(text);
   return {
-    href: `mailto:${SITE.adminEmail}?subject=${subject}&body=${body}`,
+    href: `mailto:${SITE.email}?subject=${subject}&body=${body}`,
     text,
   };
 }

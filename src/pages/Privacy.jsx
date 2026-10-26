@@ -28,7 +28,7 @@ export default function Privacy() {
           <h2>Who we are</h2>
           <p>
             The practice is {SITE.name}, {SITE.locality}.
-            Privacy contact: <a href={`mailto:${SITE.adminEmail}`}>{SITE.adminEmail}</a>, {SITE.phoneDisplay}.
+            Privacy contact: <a href={`mailto:${SITE.email}`}>{SITE.email}</a>, {SITE.phoneDisplay}.
             The earlier policy used the name Precision Cabling Suppliers. Correspondence under either name is handled by this practice.
           </p>
 
@@ -52,7 +52,7 @@ export default function Privacy() {
             <li>Design, specify, install, program, and maintain the systems you engage us for.</li>
             <li>Keep client records, including warranty and support history.</li>
             <li>Meet legal and accounting duties.</li>
-            <li>Send occasional notes about the practice, which you can opt out of by writing to {SITE.adminEmail}.</li>
+            <li>Send occasional notes about the practice, which you can opt out of by writing to {SITE.email}.</li>
           </ul>
           <p>
             We may use information for a secondary purpose closely related to the primary one, where you would reasonably expect that.
@@ -68,8 +68,8 @@ export default function Privacy() {
           <h2>Contact form, email, and logs</h2>
           <p>
             The form asks for your name, email, phone, site type, systems of interest, timeline, and message.
-            When the site is configured with a form service, the browser sends the enquiry to that service and it is delivered to {SITE.adminEmail}.
-            When no form service is configured, the form opens your own email application addressed to {SITE.adminEmail} and does not pass through a third-party form processor.
+            When the site is configured with a form service, the browser sends the enquiry to that service and it is delivered to {SITE.email}.
+            When no form service is configured, the form opens your own email application addressed to {SITE.email} and does not pass through a third-party form processor.
           </p>
           <p>
             This site does not set advertising cookies and does not run a third-party analytics product unless one is later added and this policy is updated.
@@ -100,7 +100,7 @@ export default function Privacy() {
           <h2>Access and correction</h2>
           <p>
             You may ask for the personal information we hold about you, and you may ask us to correct it, subject to the exceptions in the Privacy Act.
-            Write to <a href={`mailto:${SITE.adminEmail}`}>{SITE.adminEmail}</a>.
+            Write to <a href={`mailto:${SITE.email}`}>{SITE.email}</a>.
             We do not charge a fee to make the request. We may charge a reasonable administrative cost to provide a copy.
             We may ask you to confirm your identity before we release information.
           </p>
@@ -110,7 +110,7 @@ export default function Privacy() {
 
           <h2>Complaints</h2>
           <p>
-            Write to {SITE.adminEmail} or call {SITE.phoneDisplay}.
+            Write to {SITE.email} or call {SITE.phoneDisplay}.
             Address: {SITE.locality}.
             If you are not satisfied with our response, you may contact the Office of the Australian Information Commissioner at www.oaic.gov.au.
           </p>

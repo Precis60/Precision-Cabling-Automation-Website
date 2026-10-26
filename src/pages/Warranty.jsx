@@ -26,12 +26,12 @@ export default function Warranty() {
           </p>
           <p>
             {SITE.locality}<br />
-            Email: <a href={`mailto:${SITE.supportEmail}`}>{SITE.supportEmail}</a><br />
+            Email: <a href={`mailto:${SITE.email}`}>{SITE.email}</a><br />
             Mobile: <a href={`tel:${SITE.phoneTel}`}>{SITE.phoneDisplay}</a>
           </p>
           <p>
             Urgent support and call-out are available 24 hours. Call the mobile and leave the site address and the fault if the line is engaged.
-            Administration correspondence can also go to <a href={`mailto:${SITE.adminEmail}`}>{SITE.adminEmail}</a>.
+            Routine correspondence can also go to <a href={`mailto:${SITE.email}`}>{SITE.email}</a>.
           </p>
           <p>
             Installation and programming are carried out under the written scope for that job.

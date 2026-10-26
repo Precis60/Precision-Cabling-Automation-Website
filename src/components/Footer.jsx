@@ -14,9 +14,7 @@ export default function Footer() {
             <a href={`tel:${SITE.phoneTel}`}>{SITE.phoneDisplay}</a>
           </address>
           <p>
-            <a href={`mailto:${SITE.adminEmail}`}>{SITE.adminEmail}</a>
-            <br />
-            <a href={`mailto:${SITE.supportEmail}`}>{SITE.supportEmail}</a>
+            <a href={`mailto:${SITE.email}`}>{SITE.email}</a>
           </p>
           <p>{SITE.abn}</p>
         </div>

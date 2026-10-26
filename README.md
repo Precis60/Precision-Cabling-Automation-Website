@@ -27,8 +27,8 @@ npm run lint
 
 The consultation and contact forms collect name, email, phone, site type, systems of interest, timeline, and a message.
 
-- Set `VITE_CONTACT_FORM_ENDPOINT` to post the enquiry in the page. A Formspree endpoint looks like `https://formspree.io/f/xxxxxxxx`. A Resend setup should be a URL you control that accepts the JSON body (`name`, `email`, `phone`, `siteType`, `systems`, `timeline`, `enquiryType`, `message`) and sends it to `admin@precisioncabling.com.au`.
-- When the variable is empty, **Send enquiry** opens the visitor’s email application with the message addressed to `admin@precisioncabling.com.au`. The same text is shown on the page so it can be copied if the mail app does not open.
+- Set `VITE_CONTACT_FORM_ENDPOINT` to post the enquiry in the page. A Formspree endpoint looks like `https://formspree.io/f/xxxxxxxx`. A Resend setup should be a URL you control that accepts the JSON body (`name`, `email`, `phone`, `siteType`, `systems`, `timeline`, `enquiryType`, `message`) and sends it to `jamie@projects-consultant.com`.
+- When the variable is empty, **Send enquiry** opens the visitor’s email application with the message addressed to `jamie@projects-consultant.com`. The same text is shown on the page so it can be copied if the mail app does not open.
 
 Copy `.env.example` to `.env` for local values. In GitHub Actions, store `VITE_CONTACT_FORM_ENDPOINT` and, if you want cookieless analytics, `VITE_PLAUSIBLE_DOMAIN` as repository secrets. Analytics is not loaded when the domain is unset.
 
@@ -55,8 +55,7 @@ DNS is not changed by this repository.
 
 - Yarraville VIC 3013
 - 0413 729 663
-- admin@precisioncabling.com.au
-- support@precisioncabling.com.au
+- jamie@projects-consultant.com
 
 Consultation fee, insurance, licences, and case-study narratives are marked as placeholders until the principal supplies them.
 

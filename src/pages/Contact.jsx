@@ -39,13 +39,12 @@ export default function Contact() {
               <p>{SITE.locality}</p>
               <p>
                 Mobile: <a href={`tel:${SITE.phoneTel}`}>{SITE.phoneDisplay}</a><br />
-                Admin: <a href={`mailto:${SITE.adminEmail}`}>{SITE.adminEmail}</a><br />
-                Support: <a href={`mailto:${SITE.supportEmail}`}>{SITE.supportEmail}</a>
+                Email: <a href={`mailto:${SITE.email}`}>{SITE.email}</a>
               </p>
               <p>{SITE.abn}</p>
               <p className="callout">
                 Urgent support and call-out: telephone {SITE.phoneDisplay}, any hour.
-                Routine correspondence is answered from the admin address.
+                Routine correspondence is answered from this address.
               </p>
             </address>
           </div>

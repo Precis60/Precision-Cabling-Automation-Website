@@ -11,7 +11,7 @@ const jsonLd = {
   name: SITE.name,
   url: SITE.pagesUrl,
   telephone: SITE.phoneTel,
-  email: SITE.adminEmail,
+  email: SITE.email,
   image: `${SITE.pagesUrl}favicon.svg`,
   address: {
     "@type": "PostalAddress",

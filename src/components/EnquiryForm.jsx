@@ -118,7 +118,7 @@ export default function EnquiryForm({ defaultIntent }) {
     return (
       <div className="form-success" role="status">
         <p>
-          Enquiry sent to {SITE.adminEmail}. We will reply to {fields.email}.
+          Enquiry sent to {SITE.email}. We will reply to {fields.email}.
         </p>
         <p>
           If the matter is urgent, call <a href={`tel:${SITE.phoneTel}`}>{SITE.phoneDisplay}</a>.
@@ -131,13 +131,13 @@ export default function EnquiryForm({ defaultIntent }) {
     <form className="enquiry" onSubmit={onSubmit} noValidate>
       {status === "fallback" && (
         <div className="form-error" role="alert">
-          <p>{submitError} Use the email link below so the enquiry still reaches {SITE.adminEmail}.</p>
+          <p>{submitError} Use the email link below so the enquiry still reaches {SITE.email}.</p>
         </div>
       )}
       {status === "sent" && sent?.mode === "mailto" && (
         <div className="form-success" role="status">
           <p>
-            Your email application should open with this enquiry addressed to {SITE.adminEmail}.
+            Your email application should open with this enquiry addressed to {SITE.email}.
             If it does not, copy the text and send it yourself.
           </p>
           <p>
@@ -292,7 +292,7 @@ export default function EnquiryForm({ defaultIntent }) {
         </button>
       </div>
       <p className="placeholder-note">
-        Enquiries go to {SITE.adminEmail}. For an urgent fault, call{" "}
+        Enquiries go to {SITE.email}. For an urgent fault, call{" "}
         <a href={`tel:${SITE.phoneTel}`}>{SITE.phoneDisplay}</a>.
       </p>
     </form>
