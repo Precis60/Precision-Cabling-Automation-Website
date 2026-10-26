@@ -26,6 +26,7 @@ export default function Footer() {
           <strong>Visit</strong>
           <ul>
             <li><Link to="/services">Services</Link></li>
+            <li><Link to="/home-garden">Home &amp; Garden</Link></li>
             <li><Link to="/consultation">Consultation</Link></li>
             <li><Link to="/work">Work</Link></li>
             <li><Link to="/about-us">About</Link></li>

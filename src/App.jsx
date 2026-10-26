@@ -4,6 +4,7 @@ import Footer from "./components/Footer";
 import ScrollManager from "./components/ScrollManager";
 import Home from "./pages/Home";
 import Services from "./pages/Services";
+import HomeGarden from "./pages/HomeGarden";
 import Work from "./pages/Work";
 import Consultation from "./pages/Consultation";
 import About from "./pages/About";
@@ -35,6 +36,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/services" element={<Services />} />
+          <Route path="/home-garden" element={<HomeGarden />} />
           <Route path="/work" element={<Work />} />
           <Route path="/consultation" element={<Consultation />} />
           <Route path="/about-us" element={<About />} />

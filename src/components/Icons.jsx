@@ -54,6 +54,16 @@ export function IconAv() {
   );
 }
 
+export function IconHome() {
+  return (
+    <Svg>
+      <path d="M5.5 15.5 16 6.2l10.5 9.3" {...stroke} />
+      <path d="M8.5 13.8v11.7h15V13.8" {...stroke} />
+      <path d="M13.5 25.5v-5.5h5v5.5" {...stroke} />
+    </Svg>
+  );
+}
+
 export function IconGarden() {
   return (
     <Svg>

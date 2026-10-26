@@ -11,8 +11,9 @@ export default function ScrollManager() {
     const root = document.documentElement;
     const previous = root.style.scrollBehavior;
     root.style.scrollBehavior = "auto";
-    const pillar = new URLSearchParams(search).get("pillar");
-    const target = pillar ? document.getElementById(pillar) : null;
+    const params = new URLSearchParams(search);
+    const anchor = params.get("pillar") || params.get("section");
+    const target = anchor ? document.getElementById(anchor) : null;
     if (target) target.scrollIntoView({ block: "start" });
     else window.scrollTo(0, 0);
     root.style.scrollBehavior = previous;

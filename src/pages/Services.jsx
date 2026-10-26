@@ -80,18 +80,19 @@ const PILLARS = [
   {
     id: "garden",
     index: "05",
-    title: "Garden & landscape maintenance",
+    title: "Home & garden maintenance",
     file: "service-garden.jpg",
     width: 1400,
     height: 933,
     alt: "Illustrative photograph of a maintained garden. Not a project by this practice.",
-    lead: "Scheduled care of gardens and grounds, for homes and for commercial sites.",
+    lead: "Scheduled care of the house, garden, and grounds, for homes and for commercial sites.",
     points: [
-      "A private garden, or the grounds of a commercial site.",
-      "Beds, lawns, and the edges of the property.",
+      "A private house and garden, or the grounds of a commercial site.",
+      "Home upkeep, beds, lawns, and the edges of the property.",
       "A visit interval agreed for that site.",
       "Arranged with outdoor lighting, irrigation control, or access when those are already in scope.",
     ],
+    to: "/home-garden",
   },
 ];
 
@@ -100,7 +101,7 @@ export default function Services() {
     <>
       <Seo
         title="Services | Precision Cabling & Automation"
-        description="Security and access, networks, lighting and automation, AV, and garden and landscape maintenance. Consultation, specification, installation, and grounds care for residential and commercial sites."
+        description="Security and access, networks, lighting and automation, AV, and home and garden maintenance. Consultation, specification, installation, and grounds care for residential and commercial sites."
         path="/services"
       />
       <section className="narrow-hero">
@@ -108,7 +109,7 @@ export default function Services() {
           <span className="kicker">Services</span>
           <h1>Five disciplines, delivered by the same practice.</h1>
           <p className="lede">
-            We consult, design, and specify, then install and program. Garden and landscape maintenance is the ongoing care of the grounds.
+            We consult, design, and specify, then install and program. Home and garden maintenance is the ongoing care of the house and the grounds.
           </p>
           <nav aria-label="Services on this page">
             <ul className="jump">
@@ -152,7 +153,10 @@ export default function Services() {
                   ))}
                 </ul>
                 <p>
-                  <Link className="button" to="/consultation">Start with a consultation</Link>
+                  <Link className="button" to="/consultation">Start with a consultation</Link>{" "}
+                  {pillar.to && (
+                    <Link className="button secondary" to={pillar.to}>Open the dedicated page</Link>
+                  )}
                 </p>
               </div>
             </div>

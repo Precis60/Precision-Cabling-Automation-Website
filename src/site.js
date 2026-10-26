@@ -14,6 +14,7 @@ export const SITE = {
 export const NAV = [
   { to: "/", label: "Home", end: true },
   { to: "/services", label: "Services" },
+  { to: "/home-garden", label: "Home & Garden" },
   { to: "/work", label: "Work" },
   { to: "/consultation", label: "Consultation" },
   { to: "/about-us", label: "About" },
@@ -47,9 +48,10 @@ export const PILLARS = [
   },
   {
     id: "garden",
-    title: "Garden & landscape maintenance",
+    title: "Home & garden maintenance",
     summary:
-      "Scheduled care of gardens and grounds, for homes and commercial sites.",
+      "Scheduled care of the house, garden, and grounds, for homes and commercial sites.",
+    to: "/home-garden",
   },
 ];
 
@@ -125,7 +127,7 @@ export const SYSTEM_OPTIONS = [
   "Networks & infrastructure",
   "Lighting & automation",
   "AV & collaboration",
-  "Garden & landscape maintenance",
+  "Home & garden maintenance",
   "Not sure yet",
 ];
 

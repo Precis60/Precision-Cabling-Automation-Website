@@ -23,7 +23,7 @@ const jsonLd = {
   },
   areaServed: "Australia",
   description:
-    "Consultation, design, installation and programming for security, networks, lighting control and AV, plus garden and landscape maintenance, on residential and commercial sites.",
+    "Consultation, design, installation and programming for security, networks, lighting control and AV, plus home and garden maintenance, on residential and commercial sites.",
 };
 
 const AUDIENCES = [
@@ -94,7 +94,7 @@ export default function Home() {
     <>
       <Seo
         title="Precision Cabling & Automation | Consultation, design and delivery"
-        description="Technology consulting, installation and programming for homes and commercial sites of any size. Security, networks, lighting control, AV, and garden and landscape maintenance. Book a consultation in Yarraville."
+        description="Technology consulting, installation and programming for homes and commercial sites of any size. Security, networks, lighting control, AV, and home and garden maintenance. Book a consultation in Yarraville."
         path="/"
         jsonLd={jsonLd}
       />
@@ -106,7 +106,7 @@ export default function Home() {
             <p className="lede">
               Security, networks, lighting control, and AV, designed as one system.
               We advise on projects of any size, then install and program the work ourselves.
-              Garden and landscape maintenance is offered on the same sites.
+              Home and garden maintenance is offered on the same sites.
             </p>
             <div className="hero-actions">
               <Link className="button" to="/consultation">Book a consultation</Link>
@@ -180,7 +180,7 @@ export default function Home() {
                       {pillar.title}
                     </h3>
                     <p>{pillar.summary}</p>
-                    <Link className="more" to={`/services?pillar=${pillar.id}`}>Read the approach</Link>
+                    <Link className="more" to={pillar.to || `/services?pillar=${pillar.id}`}>Read the approach</Link>
                   </div>
                 </article>
               );
