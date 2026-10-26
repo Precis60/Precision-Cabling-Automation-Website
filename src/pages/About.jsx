@@ -42,6 +42,8 @@ export default function About() {
               alt="Illustrative photograph of a finished interior. Not the premises, and not a client project."
               width="1500"
               height="1125"
+              loading="lazy"
+              decoding="async"
             />
           </figure>
         </div>

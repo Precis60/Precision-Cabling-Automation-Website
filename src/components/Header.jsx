@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
-import { NAV } from "../site";
+import { NAV, SITE } from "../site";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
@@ -33,6 +33,9 @@ export default function Header() {
               </NavLink>
             </li>
           ))}
+          <li>
+            <a href={`tel:${SITE.phoneTel}`} onClick={close}>{SITE.phoneDisplay}</a>
+          </li>
           <li>
             <NavLink className="button header-cta" to="/consultation" onClick={close}>
               Book a consultation

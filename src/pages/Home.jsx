@@ -3,7 +3,7 @@ import Seo from "../components/Seo";
 import ConsultBand from "../components/ConsultBand";
 import { IconAv, IconGarden, IconLighting, IconNetwork, IconSecurity } from "../components/Icons";
 import { imageSrc } from "../images";
-import { CASE_STUDIES, CREDENTIALS, PILLARS, PROCESS, SITE } from "../site";
+import { CASE_STUDIES, CREDENTIALS, PILLARS, PROCESS, SITE, SUBURBS } from "../site";
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -21,7 +21,7 @@ const jsonLd = {
     postalCode: "3013",
     addressCountry: "AU",
   },
-  areaServed: "Australia",
+  areaServed: SUBURBS,
   description:
     "Consultation, design, installation and programming for security, networks, lighting control and AV, plus home and garden maintenance, on residential and commercial sites.",
 };
@@ -153,6 +153,10 @@ export default function Home() {
             ))}
           </div>
           <p className="principal">Jamie Anderson is the principal and the accountable contact.</p>
+          <p className="principal">
+            Based in Yarraville, working across Melbourne’s inner west —{" "}
+            {SUBURBS.slice(1).join(", ")} — and further afield by arrangement.
+          </p>
         </div>
       </section>
 
@@ -173,6 +177,8 @@ export default function Home() {
                     alt={tile.alt}
                     width={tile.width}
                     height={tile.height}
+                    loading="lazy"
+                    decoding="async"
                   />
                   <div className="service-tile-body">
                     <h3>
@@ -195,6 +201,8 @@ export default function Home() {
           alt="Illustrative photograph of a commercial interior. Not a project by this practice."
           width="2000"
           height="857"
+          loading="lazy"
+          decoding="async"
         />
         <div className="wrap">
           <div className="bleed-card">

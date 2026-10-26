@@ -30,6 +30,8 @@ export default function Contact() {
                 alt="Illustrative photograph of a finished interior. Not a project by this practice, and not the premises."
                 width="1500"
                 height="1125"
+                loading="lazy"
+                decoding="async"
               />
             </figure>
             <address className="contact-block">

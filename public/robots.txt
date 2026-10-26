@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://precis60.github.io/Precision-Cabling-Automation-Website/sitemap.xml

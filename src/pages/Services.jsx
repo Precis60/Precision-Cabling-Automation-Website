@@ -138,6 +138,8 @@ export default function Services() {
                   alt={pillar.alt}
                   width={pillar.width}
                   height={pillar.height}
+                  loading="lazy"
+                  decoding="async"
                 />
               </figure>
               <div className="service-copy">

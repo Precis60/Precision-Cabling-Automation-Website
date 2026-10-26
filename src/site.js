@@ -21,6 +21,21 @@ export const NAV = [
   { to: "/contact", label: "Contact" },
 ];
 
+export const SUBURBS = [
+  "Yarraville",
+  "Seddon",
+  "Kingsville",
+  "West Footscray",
+  "Footscray",
+  "Spotswood",
+  "Newport",
+  "South Kingsville",
+  "Williamstown",
+  "Altona North",
+  "Maribyrnong",
+  "Maidstone",
+];
+
 export const PILLARS = [
   {
     id: "security",

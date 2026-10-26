@@ -3,12 +3,51 @@ import Seo from "../components/Seo";
 import ConsultBand from "../components/ConsultBand";
 import { IconGarden, IconHome } from "../components/Icons";
 import { imageSrc } from "../images";
+import { SUBURBS } from "../site";
 
 const SECTIONS = [
   { id: "home", label: "Home upkeep" },
   { id: "grounds", label: "Garden & grounds" },
   { id: "visits", label: "How visits run" },
+  { id: "questions", label: "Questions" },
 ];
+
+const FAQS = [
+  {
+    q: "Do I need to be home for a visit?",
+    a: "No. Access is arranged at the site walk — a key, a code, or a concierge arrangement. Where the property has our access or intercom systems, entry can be managed without a key handover.",
+  },
+  {
+    q: "Do you bring your own tools and equipment?",
+    a: "Yes. Visits are self-sufficient — we bring what the agreed scope needs. We ask only for access, and for water and power where the job requires them.",
+  },
+  {
+    q: "What happens if it rains?",
+    a: "Work that cannot be done in the weather is rescheduled, or swapped for indoor or undercover jobs already on the scope. The visit is rearranged rather than lost.",
+  },
+  {
+    q: "Is the practice insured?",
+    a: "Credentials, including insurance, are published on the home page as they are confirmed. Ask on enquiry and the current certificate is sent with the scope.",
+  },
+  {
+    q: "One-off visit, or a regular schedule?",
+    a: "Both. A single visit for a tidy-up or a list of repairs, or an agreed interval — weekly, fortnightly, monthly, or seasonal — with the scope written down and priced per visit.",
+  },
+  {
+    q: "How is a visit priced?",
+    a: "Per visit, on the written scope agreed after the site walk. The price is confirmed before the first visit; there is no obligation from the walk itself.",
+  },
+];
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: FAQS.map((item) => ({
+    "@type": "Question",
+    name: item.q,
+    acceptedAnswer: { "@type": "Answer", text: item.a },
+  })),
+};
 
 export default function HomeGarden() {
   return (
@@ -17,6 +56,7 @@ export default function HomeGarden() {
         title="Home & Garden Maintenance | Precision Cabling & Automation"
         description="A dedicated home and garden maintenance service from the same Yarraville practice. House upkeep, gardens and grounds, on an agreed visit interval, for residential and commercial sites."
         path="/home-garden"
+        jsonLd={jsonLd}
       />
       <section className="narrow-hero">
         <div className="wrap">
@@ -46,6 +86,8 @@ export default function HomeGarden() {
               alt="Illustrative photograph of a finished interior. Not a project by this practice."
               width="1500"
               height="1125"
+              loading="lazy"
+              decoding="async"
             />
           </figure>
           <div className="service-copy">
@@ -78,6 +120,8 @@ export default function HomeGarden() {
               alt="Illustrative photograph of a maintained garden. Not a project by this practice."
               width="1400"
               height="933"
+              loading="lazy"
+              decoding="async"
             />
           </figure>
           <div className="service-copy">
@@ -133,6 +177,26 @@ export default function HomeGarden() {
           <p className="after-block">
             Where the site already has our irrigation, outdoor lighting, or access systems, the maintenance visit is arranged around them.
           </p>
+          <p className="after-block">
+            Visits run across Yarraville and Melbourne’s inner west — {SUBURBS.slice(1).join(", ")} — with wider travel by arrangement.
+          </p>
+        </div>
+      </section>
+
+      <section className="section light" id="questions" aria-labelledby="questions-title">
+        <div className="wrap">
+          <div className="section-head">
+            <h2 id="questions-title">Questions</h2>
+            <p>What clients usually ask before the first visit.</p>
+          </div>
+          <div className="grid-2">
+            {FAQS.map((item) => (
+              <article className="panel" key={item.q}>
+                <h3>{item.q}</h3>
+                <p>{item.a}</p>
+              </article>
+            ))}
+          </div>
         </div>
       </section>
 
