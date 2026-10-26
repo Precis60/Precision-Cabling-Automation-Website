@@ -18,10 +18,10 @@ They are illustrative stock, not projects of Precision Cabling & Automation, and
 | `service-networks.jpg` | Home service tile and Services, Networks & infrastructure | 3:2 on the tile, 4:3 on the service page | 1600 × 1067 |
 | `service-lighting.jpg` | Home service tile and Services, Lighting & automation | 3:2 on the tile, 4:3 on the service page | 1600 × 1067 |
 | `service-av.jpg` | Home service tile and Services, AV & collaboration | 3:2 on the tile, 4:3 on the service page | 1600 × 1067 |
-| `service-garden.jpg` | Home service tile and Services, Garden & landscape maintenance | 3:2 on the tile, 4:3 on the service page | 1600 × 1067 |
-| `detail-interior.jpg` | About, beside the principal note. Contact, above the address | 4:3 | 1600 × 1200 |
+| `service-garden.jpg` | Home service tile, Services, and Home & garden maintenance, Garden & grounds | 3:2 on the tile, 4:3 on the service pages | 1600 × 1067 |
+| `detail-interior.jpg` | About, beside the principal note. Contact, above the address. Home & garden maintenance, Home upkeep | 4:3 | 1600 × 1200 |
 
-The pages crop with `object-fit: cover`, so keep the subject near the centre. JPG or JPEG is what the templates request. A different format means updating the filename in `src/pages/Home.jsx`, `src/pages/Services.jsx`, `src/pages/About.jsx`, and `src/pages/Contact.jsx`.
+The pages crop with `object-fit: cover`, so keep the subject near the centre. JPG or JPEG is what the templates request. A different format means updating the filename in `src/pages/Home.jsx`, `src/pages/Services.jsx`, `src/pages/HomeGarden.jsx`, `src/pages/About.jsx`, and `src/pages/Contact.jsx`.
 
 ## Current files
 
