@@ -26,7 +26,7 @@ export default function ServiceCards({ as = "h3" }) {
               alt={service.image.alt}
               width={service.image.width}
               height={service.image.height}
-              loading="lazy"
+              loading="eager"
               decoding="async"
             />
             <span className="service-card-body">
