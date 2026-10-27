@@ -11,7 +11,7 @@ export default function Services() {
       />
       <section className="section services-index">
         <div className="wrap">
-          <h1>Services</h1>
+          <h1 className="centred-title">Services</h1>
           <ServiceCards as="h2" />
         </div>
       </section>
