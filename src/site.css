@@ -1536,6 +1536,10 @@ a.service-card:focus-visible .more {
   padding-top: 3.5rem;
 }
 
+.centred-title {
+  text-align: center;
+}
+
 .disclosure details {
   border-bottom: 1px solid var(--line);
 }

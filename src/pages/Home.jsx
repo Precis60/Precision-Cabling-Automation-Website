@@ -79,7 +79,7 @@ export default function Home() {
 
       <section className="section" id="services" aria-labelledby="services-title">
         <div className="wrap">
-          <h2 id="services-title">Services</h2>
+          <h2 className="centred-title" id="services-title">Services</h2>
           <ServiceCards />
         </div>
       </section>
